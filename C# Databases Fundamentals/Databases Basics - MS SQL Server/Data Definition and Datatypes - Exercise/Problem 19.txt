@@ -1,0 +1,10 @@
+SELECT *
+FROM Towns
+
+SELECT *
+FROM Departments
+
+SELECT *
+FROM Employees
+
+"*" means that it will select all the data
