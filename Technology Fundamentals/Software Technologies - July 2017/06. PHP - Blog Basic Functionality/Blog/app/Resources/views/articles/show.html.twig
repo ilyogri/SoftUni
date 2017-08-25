@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-6">
+                <article>
+                    <header>
+                        <h2>{{  }}</h2>
+                    </header>
+
+                    <p>
+                        {{  article.summary  }}
+                    </p>
+
+                    <small class="author">
+                        {{ article.author }}
+                    </small>
+                </article>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+

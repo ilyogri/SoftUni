@@ -1,0 +1,18 @@
+package com.company.Expression;
+
+import java.util.Scanner;
+
+public class SymmetricNumbers {
+    public static void main (String[] args){
+        Scanner scanner = new Scanner(System.in);
+        int range = scanner.nextInt();
+
+        for (int i = 1; i <= range; i++){
+            String currentNumString = new StringBuffer(Integer.toString(i)).reverse().toString();
+
+            if(currentNumString.equals(Integer.toString(i))){
+                System.out.print(i + " ");
+            }
+        }
+    }
+}

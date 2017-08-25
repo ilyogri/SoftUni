@@ -1,0 +1,30 @@
+package com.company.Expression;
+
+import java.util.*;
+
+public class SumsByTown {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        Map<String, Double> map = new TreeMap<>();
+        int inputLinesCount = Integer.parseInt(scanner.nextLine());
+
+        for (int i = 0; i < inputLinesCount; i++){
+            String[] tokens = Arrays.stream(scanner.nextLine()
+                    .split("[|]"))
+                    .toArray(String[]::new);
+            String town = tokens[0].trim();
+            double income = Double.parseDouble(tokens[1].trim());
+
+            if(!map.containsKey(town)){
+                map.put(town, income);
+            } else {
+                map.put(town, map.get(town) + income);
+            }
+        }
+
+        for(Map.Entry<String, Double> entry : map.entrySet()){
+            System.out.printf("%s -> %s\n", entry.getKey(), entry.getValue());
+        }
+    }
+}

@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Splinter Trip", "01. Splinter Trip\01. Splinter Trip.csproj", "{5FBF1C6D-209B-4488-9789-C1E3243773E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Spy Gram", "02. Spy Gram\02. Spy Gram.csproj", "{0BDE4042-25D7-46C0-978C-E8F819F7F468}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Spyfer", "03. Spyfer\03. Spyfer.csproj", "{B283EE4A-8CD9-494E-9C99-45D0418BD6BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. NSA", "04. NSA\04. NSA.csproj", "{9B3AD085-2B21-4E8E-9A80-0A50F7820B19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FBF1C6D-209B-4488-9789-C1E3243773E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FBF1C6D-209B-4488-9789-C1E3243773E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FBF1C6D-209B-4488-9789-C1E3243773E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FBF1C6D-209B-4488-9789-C1E3243773E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BDE4042-25D7-46C0-978C-E8F819F7F468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BDE4042-25D7-46C0-978C-E8F819F7F468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BDE4042-25D7-46C0-978C-E8F819F7F468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BDE4042-25D7-46C0-978C-E8F819F7F468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B283EE4A-8CD9-494E-9C99-45D0418BD6BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B283EE4A-8CD9-494E-9C99-45D0418BD6BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B283EE4A-8CD9-494E-9C99-45D0418BD6BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B283EE4A-8CD9-494E-9C99-45D0418BD6BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B3AD085-2B21-4E8E-9A80-0A50F7820B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3AD085-2B21-4E8E-9A80-0A50F7820B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3AD085-2B21-4E8E-9A80-0A50F7820B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3AD085-2B21-4E8E-9A80-0A50F7820B19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

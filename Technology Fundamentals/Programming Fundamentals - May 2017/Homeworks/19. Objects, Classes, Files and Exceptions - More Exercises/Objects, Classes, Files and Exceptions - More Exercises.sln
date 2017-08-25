@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Order by Age", "01. Order by Age\01. Order by Age.csproj", "{593576B8-D5AA-42E2-B1DC-7C18E3B7817F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Vehicle Catalogue", "02. Vehicle Catalogue\02. Vehicle Catalogue.csproj", "{9C298703-EC44-4FF4-B1FD-2ED742576A14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Jarvis", "03. Jarvis\03. Jarvis.csproj", "{C74A4A90-2111-43AA-9090-580BB45E2177}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Punctuation Finder", "04. Punctuation Finder\04. Punctuation Finder.csproj", "{D606ABC1-DCC0-4234-A3A3-67A3CD900850}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Write to File", "05. Write to File\05. Write to File.csproj", "{67741624-ECB8-4E78-9240-35F386592B4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Play Catch", "06. EXCELlent Knowledge\07. Play Catch.csproj", "{A67C4441-0BE9-4B22-B847-F492B5CEEEC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Personal Exception", "08. Personal Exception\08. Personal Exception.csproj", "{E9B3C25B-3C30-49D8-ADCD-A09A59E8ACB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{593576B8-D5AA-42E2-B1DC-7C18E3B7817F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{593576B8-D5AA-42E2-B1DC-7C18E3B7817F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{593576B8-D5AA-42E2-B1DC-7C18E3B7817F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{593576B8-D5AA-42E2-B1DC-7C18E3B7817F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C298703-EC44-4FF4-B1FD-2ED742576A14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C298703-EC44-4FF4-B1FD-2ED742576A14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C298703-EC44-4FF4-B1FD-2ED742576A14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C298703-EC44-4FF4-B1FD-2ED742576A14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C74A4A90-2111-43AA-9090-580BB45E2177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C74A4A90-2111-43AA-9090-580BB45E2177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C74A4A90-2111-43AA-9090-580BB45E2177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C74A4A90-2111-43AA-9090-580BB45E2177}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D606ABC1-DCC0-4234-A3A3-67A3CD900850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D606ABC1-DCC0-4234-A3A3-67A3CD900850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D606ABC1-DCC0-4234-A3A3-67A3CD900850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D606ABC1-DCC0-4234-A3A3-67A3CD900850}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67741624-ECB8-4E78-9240-35F386592B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67741624-ECB8-4E78-9240-35F386592B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67741624-ECB8-4E78-9240-35F386592B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67741624-ECB8-4E78-9240-35F386592B4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A67C4441-0BE9-4B22-B847-F492B5CEEEC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A67C4441-0BE9-4B22-B847-F492B5CEEEC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A67C4441-0BE9-4B22-B847-F492B5CEEEC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A67C4441-0BE9-4B22-B847-F492B5CEEEC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9B3C25B-3C30-49D8-ADCD-A09A59E8ACB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9B3C25B-3C30-49D8-ADCD-A09A59E8ACB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9B3C25B-3C30-49D8-ADCD-A09A59E8ACB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9B3C25B-3C30-49D8-ADCD-A09A59E8ACB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

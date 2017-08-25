@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Rage Quit", "03.Rage Quit.csproj", "{EF0BD4E2-3FDF-4CA7-8586-CEDB508D5104}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Sino The Walker", "..\01. Sino The Walker\01. Sino The Walker.csproj", "{328F0BC8-2305-4D1C-8278-4BD967E70A9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Hornet Wings", "01. Hornet Wings\01. Hornet Wings.csproj", "{7B73E236-F151-4CA0-B4FD-965A3EB53F77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 2 – Hornet Comm", "Problem 2 – Hornet Comm\Problem 2 – Hornet Comm.csproj", "{419FED49-398D-46A6-8981-01D7B56B8547}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Hornet Assault", "03. Hornet Assault\03. Hornet Assault.csproj", "{FFA0DEB6-326C-49DC-A745-E219FDF9D5F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Hornet Armada", "..\04. Hornet Armada\04. Hornet Armada.csproj", "{DA7E065A-0B0D-4FC9-8ACA-4959631D3C16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Lady Bugs", "..\02. Lady Bugs\02. Lady Bugs.csproj", "{52B62281-298A-4798-BEA8-42DBC076311B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF0BD4E2-3FDF-4CA7-8586-CEDB508D5104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF0BD4E2-3FDF-4CA7-8586-CEDB508D5104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF0BD4E2-3FDF-4CA7-8586-CEDB508D5104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF0BD4E2-3FDF-4CA7-8586-CEDB508D5104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{328F0BC8-2305-4D1C-8278-4BD967E70A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{328F0BC8-2305-4D1C-8278-4BD967E70A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{328F0BC8-2305-4D1C-8278-4BD967E70A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{328F0BC8-2305-4D1C-8278-4BD967E70A9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B73E236-F151-4CA0-B4FD-965A3EB53F77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B73E236-F151-4CA0-B4FD-965A3EB53F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B73E236-F151-4CA0-B4FD-965A3EB53F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B73E236-F151-4CA0-B4FD-965A3EB53F77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{419FED49-398D-46A6-8981-01D7B56B8547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{419FED49-398D-46A6-8981-01D7B56B8547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{419FED49-398D-46A6-8981-01D7B56B8547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{419FED49-398D-46A6-8981-01D7B56B8547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA0DEB6-326C-49DC-A745-E219FDF9D5F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA0DEB6-326C-49DC-A745-E219FDF9D5F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA0DEB6-326C-49DC-A745-E219FDF9D5F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA0DEB6-326C-49DC-A745-E219FDF9D5F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA7E065A-0B0D-4FC9-8ACA-4959631D3C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7E065A-0B0D-4FC9-8ACA-4959631D3C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7E065A-0B0D-4FC9-8ACA-4959631D3C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7E065A-0B0D-4FC9-8ACA-4959631D3C16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52B62281-298A-4798-BEA8-42DBC076311B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52B62281-298A-4798-BEA8-42DBC076311B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52B62281-298A-4798-BEA8-42DBC076311B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52B62281-298A-4798-BEA8-42DBC076311B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

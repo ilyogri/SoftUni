@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Match full name", "1. Replace a tag\1. Match full name.csproj", "{505D1194-C379-462B-BD5D-DABEE24EF358}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. Match phone number", "2. Match phone number\2. Match phone number.csproj", "{427E3E05-7AED-4AFC-A85A-4214C67A98BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. Replace tag", "7. Replace  tag\7. Replace tag.csproj", "{776B31C6-7454-4518-9B51-FD72916F8082}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{505D1194-C379-462B-BD5D-DABEE24EF358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505D1194-C379-462B-BD5D-DABEE24EF358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505D1194-C379-462B-BD5D-DABEE24EF358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505D1194-C379-462B-BD5D-DABEE24EF358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{427E3E05-7AED-4AFC-A85A-4214C67A98BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{427E3E05-7AED-4AFC-A85A-4214C67A98BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{427E3E05-7AED-4AFC-A85A-4214C67A98BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{427E3E05-7AED-4AFC-A85A-4214C67A98BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{776B31C6-7454-4518-9B51-FD72916F8082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{776B31C6-7454-4518-9B51-FD72916F8082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{776B31C6-7454-4518-9B51-FD72916F8082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{776B31C6-7454-4518-9B51-FD72916F8082}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Array Modifier", "02. Array Modifier\02. Array Modifier.csproj", "{2CA01A63-667C-4936-B4EF-3AA480B0DD48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Population Aggregation", "04. Population Aggregation\04. Population Aggregation.csproj", "{70901F50-D58C-4C50-BE79-B70ECAAE4D55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CA01A63-667C-4936-B4EF-3AA480B0DD48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CA01A63-667C-4936-B4EF-3AA480B0DD48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CA01A63-667C-4936-B4EF-3AA480B0DD48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CA01A63-667C-4936-B4EF-3AA480B0DD48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70901F50-D58C-4C50-BE79-B70ECAAE4D55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70901F50-D58C-4C50-BE79-B70ECAAE4D55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70901F50-D58C-4C50-BE79-B70ECAAE4D55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70901F50-D58C-4C50-BE79-B70ECAAE4D55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
