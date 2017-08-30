@@ -1,0 +1,8 @@
+SELECT CountryName, CountryCode,
+CASE (CurrencyCode)
+WHEN 'EUR' THEN 'Euro'   -- if the currency code is "EUR" then we initialize the "Currency" as "Euro"
+ELSE 'Not Euro'			 -- else its "Not Euro"
+END
+'Currency'   			 -- here stays the name for the column
+FROM Countries
+ORDER BY CountryName ASC

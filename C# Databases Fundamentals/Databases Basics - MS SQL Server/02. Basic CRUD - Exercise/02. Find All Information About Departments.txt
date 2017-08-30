@@ -1,0 +1,4 @@
+First we select the database "SoftUni" or we just write USE SoftUni in the beggining of our query.
+
+SELECT *
+FROM Departments
