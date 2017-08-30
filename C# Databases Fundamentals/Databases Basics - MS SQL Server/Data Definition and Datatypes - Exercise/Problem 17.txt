@@ -1,1 +1,0 @@
-How to backup a database is shown right here: http://www.serverintellect.com/support/sqlserver/database-backup-ssmse/

@@ -1,4 +1,0 @@
-Adding default value to a the datetime "LastLoginTime":
-
-ALTER TABLE Users
-ADD CONSTRAINT DF_Date DEFAULT GETDATE() FOR LastLoginTime
