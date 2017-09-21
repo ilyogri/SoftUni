@@ -1,0 +1,6 @@
+SELECT Name, CASE (DATEPART(HOUR, Start))
+WHEN  THEN 'Morning'
+END
+FROM Games
+ORDER BY Name, Duration, [Part of the Day]
+--AND DATEPART(HOUR, Start) < 12

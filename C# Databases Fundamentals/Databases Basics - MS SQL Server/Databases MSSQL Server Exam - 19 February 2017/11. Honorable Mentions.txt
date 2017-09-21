@@ -1,0 +1,12 @@
+SELECT f.ProductId, CONCAT(c.FirstName, ' ', c.LastName) AS CustomerName, f.Description
+FROM Feedbacks as f
+INNER JOIN Customers AS c ON f.CustomerId = c.Id
+WHERE 3 <= (
+  SELECT COUNT(fb.CustomerId) FROM Feedbacks AS fb
+  INNER JOIN Customers AS c 
+  ON fb.CustomerId = c.Id 
+  WHERE fb.CustomerId = f.CustomerId
+  )
+ORDER BY f.ProductId,
+CustomerName,
+f.Id

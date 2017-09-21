@@ -1,0 +1,7 @@
+UPDATE Jobs
+SET MechanicId = 3
+WHERE MechanicId IS NULL
+
+UPDATE Jobs
+SET Status = 'In Progress'
+WHERE Status = 'Pending'

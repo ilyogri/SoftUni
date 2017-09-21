@@ -1,0 +1,6 @@
+CREATE VIEW v_UserWithCountries AS 
+SELECT CONCAT(cm.FirstName, ' ', cm.LastName) AS CustomerName,
+cm.Age, cm.Gender, cr.Name
+FROM Customers AS cm
+INNER JOIN Countries AS cr
+ON cr.Id = cm.CountryId

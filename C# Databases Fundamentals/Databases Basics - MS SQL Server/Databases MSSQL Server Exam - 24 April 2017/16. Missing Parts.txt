@@ -1,0 +1,11 @@
+SELECT p.PartId, p.Description, pt.Quantity AS Required,
+ (SELECT StockQty FROM Parts WHERE PartId = p.PartId) AS [In Stock]
+, o.Delivered
+ FROM Parts AS p
+LEFT JOIN OrderParts AS op ON op.PartId = p.PartId
+LEFT JOIN Orders AS o ON o.OrderId = op.OrderId
+LEFT JOIN PartsNeeded AS pt ON pt.PartId = p.PartId
+LEFT JOIN Jobs AS j ON j.JobId = pt.JobId
+WHERE j.Status <> 'Finished' AND o.Delivered = 0
+GROUP BY p.PartId, p.Description, pt.Quantity, o.Delivered
+ORDER BY p.PartId

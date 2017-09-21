@@ -1,0 +1,29 @@
+CREATE FUNCTION ufn_IsWordComprised(@setOfLetters NVARCHAR(MAX), @word NVARCHAR(MAX)) 
+RETURNS BIT
+AS
+BEGIN
+ DECLARE @loopCounter INT = 1;
+ DECLARE @charIndex INT = 1;
+ DECLARE @result BIT = 0
+
+ WHILE @loopCounter <= LEN(@setOfLetters) AND LEN(@word) > 0 AND @charIndex <= LEN(@setOfLetters)
+ BEGIN
+  DECLARE @currentChar CHAR = SUBSTRING(@setOfLetters, @charIndex, 1)
+  DECLARE @charIndexToRemove INT = CHARINDEX(SUBSTRING(@currentChar, @loopCounter, 1), @word)
+  IF(@charIndexToRemove > 0)
+  BEGIN
+   DECLARE @charToRemove CHAR = SUBSTRING(@word, @charIndexToRemove, 1);
+   SET @word = REPLACE(@word, @charToRemove, '')
+  END
+  SET @charIndex += 1
+ END
+ IF(LEN(@word) = 0)
+ BEGIN
+  SET @result = 1
+ END
+ RETURN @result
+END
+
+
+ --Check:
+ --SELECT dbo.ufn_IsWordComprised('bobr', 'Rob') AS Result

@@ -1,0 +1,11 @@
+SELECT TOP(5) c.CountryName,
+ CASE WHEN p.PeakName IS NULL THEN '(no highest peak)' END ,
+ CASE WHEN MAX(p.Elevation) IS NULL THEN '0' END AS HighestPeakElevation,
+ CASE WHEN m.MountainRange IS NULL THEN '(no mountain)' END
+FROM Countries AS c
+LEFT JOIN MountainsCountries AS mc ON c.CountryCode = mc.CountryCode
+LEFT JOIN Mountains AS m ON mc.MountainId = m.Id
+LEFT JOIN Peaks AS p ON m.Id = p.MountainId
+GROUP BY c.CountryName, p.PeakName, m.MountainRange
+ORDER BY c.CountryName ASC,
+HighestPeakElevation ASC
