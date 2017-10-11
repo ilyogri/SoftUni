@@ -1,0 +1,22 @@
+--Creating the table:
+
+CREATE TABLE People (
+	Id INT IDENTITY PRIMARY KEY,
+	Name NVARCHAR(200) NOT NULL,
+	Picture VARBINARY(2),
+	Height float(2),
+	Weight float(2),
+	Gender char(1) CHECK (Gender = 'm' OR Gender = 'f') NOT NULL,
+	BirthDate DATE NOT NULL,
+	Biography NVARCHAR(MAX)
+)
+
+--Inserting data into the table:
+
+INSERT INTO People (Name, Picture, Height, Weight, Gender, BirthDate, Biography)
+VALUES
+('Киро', 1.5, 1.72, 65.5, 'm', '1981-01-21', 'Кирчо е един лудак.'),
+('Митьо', 1.2, 1.75, 70.1, 'm', '1985-02-05', 'Митьо обича футбола.'),
+('Петко', 1.3, 1.82, 71.25, 'm', '1990-12-11', 'Петко харесва риболова.'),
+('Ганка', 1.7, 1.90, 80.50, 'f', '1960-09-23', 'Ганка обича своето куче.'),
+('Мара', 0.5, 1.64, 55.01, 'f', '2000-05-10', 'Мара има рожден ден днес.')

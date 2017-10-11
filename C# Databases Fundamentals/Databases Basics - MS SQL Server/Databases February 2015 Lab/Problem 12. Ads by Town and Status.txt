@@ -1,0 +1,13 @@
+SELECT
+t.Name AS [Town Name], ads.Status, COUNT(*) AS [Count]
+FROM 
+Ads AS a
+JOIN Towns AS t ON t.Id = a.TownId
+JOIN AdStatuses AS ads ON ads.Id = a.StatusId
+JOIN Categories AS c ON c.Id = a.CategoryId
+GROUP BY 
+t.Name, ads.Status
+HAVING 
+COUNT(*) > 0
+ORDER BY
+[Town Name], ads.Status

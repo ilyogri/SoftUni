@@ -1,0 +1,4 @@
+CREATE VIEW V_EmployeeNameJobTitle AS
+SELECT FirstName + ' ' + coalesce (MiddleName, '') + ' ' + LastName
+AS 'FullName', JobTitle
+FROM Employees

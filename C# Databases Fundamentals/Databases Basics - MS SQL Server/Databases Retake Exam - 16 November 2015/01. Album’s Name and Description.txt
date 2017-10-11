@@ -1,0 +1,14 @@
+SELECT Name, CASE WHEN Description IS NULL THEN 'No description'
+ELSE Description END AS Description FROM Albums
+ORDER BY Name
+
+Name,Description
+Digital Kids Conference - 1 Nov 2014,No description
+Mobile,Mobile uploads
+New Year 2015,No description
+OpenFest 2014,OpenFest - Sofia, 1-Nov-2014 University education in the IT sector - problems and solutions
+SoftUni Conf May 2014,No description
+SoftUni Teambuilding,Special contributions
+Software University Team Building GrandFinale,No description
+The little things in my life,Unforgettable moments...
+VarnaConf 2013,Programming and technology conferences

@@ -1,0 +1,17 @@
+SELECT m.Name FROM Manufacturers AS m
+FULL JOIN Cameras AS c ON c.ManufacturerId = m.Id
+FULL JOIN Lenses AS l ON l.ManufacturerId = m.Id
+WHERE c.Id IS NULL AND l.Id IS NULL
+ORDER BY m.Name
+
+
+Name
+Agfa
+Casio
+Contax
+Epson
+HP
+Kodak
+Konica Minolta
+Kyocera
+Ricoh

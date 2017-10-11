@@ -1,0 +1,8 @@
+SELECT cmr.FirstName, cmr.Age, cmr.PhoneNumber
+FROM Customers AS cmr
+INNER JOIN Countries AS cs
+ON cs.Id = cmr.CountryId
+WHERE (Age >= 21 AND cmr.FirstName LIKE ('%an%')) OR
+(RIGHT(cmr.PhoneNumber, 2) = '38' AND cs.Name != 'Greece')
+ORDER BY cmr.FirstName,
+Age DESC

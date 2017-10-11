@@ -1,0 +1,19 @@
+SELECT prod.Name AS ProductName, AVG(feed.Rate) AS ProductAverageRate,
+ dist.Name AS DistributorName, cou.Name AS DistributorCountry FROM Products AS prod
+JOIN Feedbacks AS feed ON feed.ProductId = prod.Id
+JOIN ProductsIngredients AS prodIng ON prodIng.ProductId = prod.Id
+JOIN Ingredients AS ingr ON ingr.Id = prodIng.IngredientId
+JOIN Distributors AS dist ON dist.Id = ingr.DistributorId
+JOIN Countries AS cou ON cou.Id = dist.CountryId
+WHERE prod.Name IN (
+					Select prod.Name from Feedbacks AS feed
+					JOIN Products AS prod ON prod.Id = feed.ProductId
+					JOIN ProductsIngredients AS prodIng ON prodIng.ProductId = prod.id
+					JOIN Ingredients AS ing ON ing.Id = prodIng.IngredientId
+					JOIN Distributors AS dis ON dis.Id = ing.DistributorId
+					JOIN Countries AS cou ON cou.Id = dis.CountryId
+					GROUP BY prod.Name
+					HAVING Count( Distinct dis.Name ) = 1
+)
+GROUP BY prod.Id, prod.Name, dist.Name, cou.Name
+ORDER BY prod.Id

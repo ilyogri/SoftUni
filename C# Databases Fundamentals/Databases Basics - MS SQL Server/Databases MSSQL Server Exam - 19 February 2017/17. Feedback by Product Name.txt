@@ -1,0 +1,18 @@
+CREATE FUNCTION udf_GetRating (@Name NVARCHAR(25))
+RETURNS NVARCHAR(MAX)
+AS
+BEGIN
+  DECLARE @ret NVARCHAR(MAX)
+  SELECT @ret = n.Name FROM (
+  SELECT AVG(f.Rate) AS AverageRate, CASE
+   WHEN AVG(f.Rate) < 5 THEN 'Bad'
+   WHEN AVG(f.Rate) BETWEEN 5 AND 8 THEN 'Average'
+   WHEN AVG(f.Rate) > 8 THEN 'Good'
+   WHEN AVG(f.Rate) IS NULL THEN 'No rating'
+   END AS Name
+    FROM Feedbacks AS f
+    INNER JOIN Products AS p ON p.Id = f.ProductId
+    WHERE p.Name = @Name
+  ) AS n
+  RETURN @ret
+END

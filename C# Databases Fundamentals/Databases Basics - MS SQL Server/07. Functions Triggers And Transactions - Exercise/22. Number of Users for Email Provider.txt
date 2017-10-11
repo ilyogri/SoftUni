@@ -1,0 +1,9 @@
+SELECT REPLACE(SUBSTRING(Email,
+ CHARINDEX('@', Email),
+  LEN(Email)) , '@', '') AS 'Email Provider', COUNT(*) AS 'Number Of Users'
+  FROM Users
+  GROUP BY REPLACE(SUBSTRING(Email,
+ CHARINDEX('@', Email),
+  LEN(Email)) , '@', '')
+  ORDER BY 'Number Of Users' DESC,
+  'Email Provider'

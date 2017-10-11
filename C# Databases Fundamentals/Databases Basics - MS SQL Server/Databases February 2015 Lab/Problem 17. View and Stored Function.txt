@@ -1,0 +1,41 @@
+CREATE FUNCTION fn_ListUsersAds()
+RETURNS @tbl_UserDates TABLE(
+				UserName VARCHAR(MAX),
+				AdDates VARCHAR(MAX)
+				)
+ 
+AS BEGIN
+	
+	DECLARE @UserName AS VARCHAR(MAX)
+	DECLARE @Date AS VARCHAR(MAX)
+
+	DECLARE myData CURSOR FOR
+	SELECT u.UserName, FORMAT(Date, 'yyyyMMdd') AS AdDates
+	FROM AspNetUsers AS u LEFT JOIN Ads AS a ON a.OwnerId = u.Id
+	ORDER BY u.UserName DESC, a.Date
+
+	OPEN myData
+	FETCH NEXT FROM myData INTO @UserName, @Date
+	WHILE @@FETCH_STATUS = 0
+	BEGIN
+		IF((SELECT COUNT(UserName) FROM @tbl_UserDates WHERE UserName = @UserName) = 0)
+		 BEGIN
+		 	INSERT INTO @tbl_UserDates
+		 	VALUES (@UserName, @Date + '; ')
+		 END
+
+		ELSE
+		 BEGIN
+		 	UPDATE @tbl_UserDates
+		 	SET @Date += @Date + '; '
+		 	WHERE UserName = @UserName
+		 END
+
+		 FETCH NEXT FROM myData INTO @UserName ,@Date
+        END;
+    CLOSE myData;
+	DEALLOCATE myData;
+	RETURN;
+END
+
+SELECT * FROM fn_ListUsersAds()

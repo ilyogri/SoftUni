@@ -1,0 +1,18 @@
+CREATE FUNCTION fn_CashInUsersGames (@gameName NVARCHAR(50))
+RETURNS TABLE
+AS
+	
+	RETURN (
+	SELECT SUM(a.Cash) AS SumCash FROM(SELECT Cash, ROW_NUMBER() OVER (ORDER BY Cash DESC) AS RowN
+	FROM UsersGames AS ug
+    JOIN Games AS g ON g.Id = ug.GameId
+	WHERE g.Name = @gameName) a
+	WHERE a.RowN % 2 != 0)
+	
+
+
+SELECT * FROM fn_CashInUsersGames ('Bali')
+SELECT * FROM fn_CashInUsersGames ('Lily Stargazer')
+SELECT * FROM fn_CashInUsersGames ('Love in a mist')
+SELECT * FROM fn_CashInUsersGames ('Mimosa')
+SELECT * FROM fn_CashInUsersGames ('Ming fern')

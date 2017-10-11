@@ -1,0 +1,15 @@
+CREATE TRIGGER tr_Update_Flights ON Flights AFTER UPDATE
+AS BEGIN
+	IF((SELECT TOP(1) Status FROM inserted) = 'Arrived')
+	BEGIN
+
+	INSERT INTO ArrivedFlights
+	SELECT d.FlightID, d.ArrivalTime, oa.AirportName, da.AirportName, COUNT(t.TicketID)
+	 FROM deleted AS d
+	JOIN Airports AS oa ON oa.AirportID = d.OriginAirportID
+	JOIN Airports AS da ON da.AirportID = d.DestinationAirportID
+	JOIN Tickets AS t ON t.FlightID = d.FlightID
+	GROUP BY d.FlightID, d.ArrivalTime, oa.AirportName, da.AirportName
+
+	END
+END

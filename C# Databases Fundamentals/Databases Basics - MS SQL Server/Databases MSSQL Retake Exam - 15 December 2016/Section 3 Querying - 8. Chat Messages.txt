@@ -1,0 +1,5 @@
+SELECT c.Id, c.Title, m.Id FROM Chats AS c
+FULL JOIN Messages AS m ON m.ChatId = c.Id
+WHERE m.SentOn < '03-26-2012'
+AND RIGHT(c.Title, 1) = 'x'
+ORDER BY c.Id, m.Id

@@ -1,0 +1,11 @@
+SELECT CountryName, IsoCode
+FROM Countries
+WHERE LEN(CountryName) - LEN(REPLACE(CountryName,'a','')) >= 3
+ORDER BY IsoCode
+
+Another solution:
+
+SELECT CountryName, IsoCode
+FROM Countries
+WHERE CountryName LIKE '%A%A%A%'
+ORDER BY IsoCode

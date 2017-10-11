@@ -1,0 +1,5 @@
+SELECT EmployeeID, FirstName, LastName, d.Name as DepartmentName
+FROM Employees as e
+INNER JOIN Departments as d ON e.DepartmentID = d.DepartmentID
+WHERE d.Name = 'Sales'
+ORDER BY EmployeeID

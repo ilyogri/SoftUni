@@ -1,0 +1,7 @@
+SELECT TOP(10)
+a.Title, a.Date, ast.Status
+FROM
+Ads AS a
+JOIN AdStatuses AS ast ON ast.Id = a.StatusId
+ORDER BY
+Date DESC

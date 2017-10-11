@@ -1,0 +1,31 @@
+SELECT m.Name, c.Model, c.Price AS Price FROM Cameras AS c
+INNER JOIN Manufacturers AS m ON m.Id = c.ManufacturerId
+WHERE c.Price > (SELECT AVG(Price) FROM Cameras)
+ORDER BY Price DESC, c.Model
+
+
+Name,Model,Price
+Pentax,645Z,8024.00
+Nikon,D810,4697.00
+Canon,5DS,3899.00
+Nikon,D750,3697.00
+Sony,Alpha 7R II,3198.00
+Sony,Alpha 7S,2498.00
+Canon,EOS 7D Mark II,2248.00
+Leica,X Vario,2099.00
+Fujifilm,X-T1,1899.00
+Sony,Alpha 7 II,1698.00
+Nikon,D7200,1644.00
+Sony,Alpha 7,1596.00
+Samsung,Galaxy NX,1399.00
+Samsung,NX1,1299.00
+Fujifilm,X100T,1299.00
+Sony,Cyber-shot DSC-RX10 II,1298.00
+Canon,EOS 760D,1298.00
+Nikon,D5500,1194.00
+Panasonic,Lumix DMC G7,1098.00
+Canon,PowerShot G3 X,999.00
+Pentax,K-5 II,998.00
+Pentax,K-3,979.00
+Pentax,K-3 II,969.00
+Sony,Cyber-shot DSC-RX100 IV,948.00

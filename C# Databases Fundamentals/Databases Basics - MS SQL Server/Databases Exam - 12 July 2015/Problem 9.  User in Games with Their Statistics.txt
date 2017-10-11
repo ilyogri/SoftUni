@@ -1,0 +1,19 @@
+SELECT 
+u.Username, g.Name AS Game, c.Name AS Character, 
+SUM(cs.Strength + gts.Strength + ugs.Strength) AS Strength, SUM(cs.Defence) AS Defence,
+SUM(cs.Speed) AS Speed, SUM(cs.Mind) AS Mind,
+SUM(ugs.Luck) + SUM(gts.Luck) + SUM(cs.Luck) AS Luck
+FROM Users AS u
+JOIN UsersGames AS ug ON u.Id = ug.UserId
+JOIN UserGameItems AS ugi ON ugi.UserGameId = ug.Id
+JOIN Items AS i ON i.Id = ugi.ItemId
+JOIN Games AS g ON ug.GameId = g.Id
+JOIN GameTypes AS gt ON gt.Id = g.GameTypeId
+JOIN Characters AS c ON c.Id = ug.CharacterId
+JOIN [Statistics] AS cs ON cs.Id = c.StatisticId
+JOIN [Statistics] AS gts ON gts.Id = gt.BonusStatsId
+JOIN [Statistics] AS ugs ON ugs.Id = i.StatisticId
+WHERE u.Username = 'skippingside' AND g.Name = 'Rose Fire & Ice'
+GROUP BY u.Username, g.Name, c.Name
+ORDER BY Strength	,Defence	,Speed	,Mind	,Luck
+

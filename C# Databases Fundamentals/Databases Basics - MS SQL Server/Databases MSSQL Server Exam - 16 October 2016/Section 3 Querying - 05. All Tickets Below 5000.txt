@@ -1,0 +1,7 @@
+SELECT TicketID, ap.AirportName, c.FirstName + ' ' + c.LastName AS CustomerName FROM Tickets AS t
+JOIN Flights AS f ON f.FlightID = t.FlightID
+JOIN Airports AS ap ON ap.AirportID = f.DestinationAirportID
+JOIN Airlines AS al ON al.AirlineID = f.AirlineID
+JOIN Customers AS c ON c.CustomerID = t.CustomerID
+WHERE t.Class = 'First' AND t.Price < 5000
+ORDER BY t.TicketID
