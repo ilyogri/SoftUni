@@ -1,8 +1,0 @@
-CREATE PROCEDURE usp_GetHoldersFullName
- AS
- BEGIN TRANSACTION
-  SELECT FirstName + ' ' + LastName AS FullName FROM AccountHolders
- COMMIT
-
- --CHECK:
- --EXEC usp_GetHoldersFullName

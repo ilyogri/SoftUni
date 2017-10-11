@@ -1,7 +1,0 @@
-SELECT TOP(10) FirstName, LastName, DepartmentID
-FROM Employees t1
-WHERE Salary > (SELECT AVG(Salary) AS AvgSalary
-					FROM Employees t2
-						WHERE t2.DepartmentID = t1.DepartmentID
-							GROUP BY DepartmentId)
-ORDER BY DepartmentID

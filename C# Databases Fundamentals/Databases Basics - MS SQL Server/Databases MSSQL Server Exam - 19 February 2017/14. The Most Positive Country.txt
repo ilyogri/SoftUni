@@ -1,8 +1,0 @@
-SELECT TOP(1) WITH TIES c.Name AS CountryName, AVG(f.Rate) AS FeedbackRate
-FROM Countries AS c
-INNER JOIN Customers AS cm
-ON cm.CountryId = c.Id
-INNER JOIN Feedbacks AS f
-ON f.CustomerId = cm.Id
-GROUP BY c.Name
-ORDER BY FeedbackRate DESC

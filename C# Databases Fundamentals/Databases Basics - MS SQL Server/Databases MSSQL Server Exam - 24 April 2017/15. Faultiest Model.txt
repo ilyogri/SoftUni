@@ -1,8 +1,0 @@
-SELECT TOP(1) WITH TIES	 m.Name AS Model, COUNT(j.IssueDate) AS [Times Serviced],
- SUM(p.Price) AS [Parts Total] FROM Models AS m
-LEFT JOIN Jobs AS j ON j.ModelId = m.ModelId
-LEFT JOIN Orders AS o ON o.JobId = j.JobId
-LEFT JOIN OrderParts AS op ON op.OrderId = o.OrderId
-LEFT JOIN Parts AS p ON p.PartId = op.PartId
-GROUP BY m.Name
-ORDER BY [Times Serviced] DESC

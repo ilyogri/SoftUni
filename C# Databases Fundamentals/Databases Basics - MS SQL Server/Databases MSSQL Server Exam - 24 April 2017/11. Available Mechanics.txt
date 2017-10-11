@@ -1,6 +1,0 @@
-SELECT Available.Available FROM (SELECT CONCAT(mech.FirstName, ' ', mech.LastName) AS Available, mech.MechanicId AS MechId
-FROM Mechanics AS mech
-JOIN Jobs AS j ON j.MechanicId = mech.MechanicId
-WHERE j.Status IN ('Pending', 'Finished') OR j.Status IS NULL
-GROUP BY mech.MechanicId, CONCAT(mech.FirstName, ' ', mech.LastName)
-) AS  Available ORDER BY Available.MechId
