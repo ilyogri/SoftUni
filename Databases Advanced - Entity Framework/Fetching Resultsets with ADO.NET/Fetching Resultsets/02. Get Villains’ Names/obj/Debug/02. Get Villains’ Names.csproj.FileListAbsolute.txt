@@ -1,0 +1,5 @@
+C:\Users\ASUS\documents\visual studio 2017\Projects\Fetching Resultsets\02. Get Villains’ Names\bin\Debug\_02.Get_Villains__Names.exe.config
+C:\Users\ASUS\documents\visual studio 2017\Projects\Fetching Resultsets\02. Get Villains’ Names\bin\Debug\_02.Get_Villains__Names.exe
+C:\Users\ASUS\documents\visual studio 2017\Projects\Fetching Resultsets\02. Get Villains’ Names\bin\Debug\_02.Get_Villains__Names.pdb
+C:\Users\ASUS\documents\visual studio 2017\Projects\Fetching Resultsets\02. Get Villains’ Names\obj\Debug\_02.Get_Villains__Names.exe
+C:\Users\ASUS\documents\visual studio 2017\Projects\Fetching Resultsets\02. Get Villains’ Names\obj\Debug\_02.Get_Villains__Names.pdb

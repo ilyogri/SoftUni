@@ -1,0 +1,6 @@
+c:\users\asus\documents\visual studio 2017\Projects\EF Code First + OOP Intro Exercises\02. Create Person Constructors\bin\Debug\_02.Create_Person_Constructors.exe.config
+c:\users\asus\documents\visual studio 2017\Projects\EF Code First + OOP Intro Exercises\02. Create Person Constructors\bin\Debug\_02.Create_Person_Constructors.exe
+c:\users\asus\documents\visual studio 2017\Projects\EF Code First + OOP Intro Exercises\02. Create Person Constructors\bin\Debug\_02.Create_Person_Constructors.pdb
+c:\users\asus\documents\visual studio 2017\Projects\EF Code First + OOP Intro Exercises\02. Create Person Constructors\obj\Debug\_02.Create_Person_Constructors.exe
+c:\users\asus\documents\visual studio 2017\Projects\EF Code First + OOP Intro Exercises\02. Create Person Constructors\obj\Debug\_02.Create_Person_Constructors.pdb
+c:\users\asus\documents\visual studio 2017\Projects\EF Code First + OOP Intro Exercises\02. Create Person Constructors\obj\Debug\02. Create Person Constructors.csprojResolveAssemblyReference.cache

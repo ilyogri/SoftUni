@@ -1,0 +1,6 @@
+C:\Users\ASUS\documents\visual studio 2017\Projects\Fetching Resultsets\03. Get Minion Names\bin\Debug\_03.Get_Minion_Names.exe.config
+C:\Users\ASUS\documents\visual studio 2017\Projects\Fetching Resultsets\03. Get Minion Names\bin\Debug\_03.Get_Minion_Names.exe
+C:\Users\ASUS\documents\visual studio 2017\Projects\Fetching Resultsets\03. Get Minion Names\bin\Debug\_03.Get_Minion_Names.pdb
+C:\Users\ASUS\documents\visual studio 2017\Projects\Fetching Resultsets\03. Get Minion Names\obj\Debug\03. Get Minion Names.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\documents\visual studio 2017\Projects\Fetching Resultsets\03. Get Minion Names\obj\Debug\_03.Get_Minion_Names.exe
+C:\Users\ASUS\documents\visual studio 2017\Projects\Fetching Resultsets\03. Get Minion Names\obj\Debug\_03.Get_Minion_Names.pdb

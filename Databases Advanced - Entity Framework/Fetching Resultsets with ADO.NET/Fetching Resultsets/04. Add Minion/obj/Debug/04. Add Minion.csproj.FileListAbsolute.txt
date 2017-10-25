@@ -1,0 +1,6 @@
+C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\04. Add Minion\bin\Debug\_04.Add_Minion.exe.config
+C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\04. Add Minion\bin\Debug\_04.Add_Minion.exe
+C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\04. Add Minion\bin\Debug\_04.Add_Minion.pdb
+C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\04. Add Minion\obj\Debug\04. Add Minion.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\04. Add Minion\obj\Debug\_04.Add_Minion.exe
+C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\04. Add Minion\obj\Debug\_04.Add_Minion.pdb

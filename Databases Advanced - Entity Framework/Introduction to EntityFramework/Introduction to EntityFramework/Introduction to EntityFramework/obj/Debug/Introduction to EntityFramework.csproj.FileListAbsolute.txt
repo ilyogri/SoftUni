@@ -1,0 +1,10 @@
+c:\users\asus\documents\visual studio 2017\Projects\Introduction to EntityFramework\Introduction to EntityFramework\obj\Debug\Introduction to EntityFramework.csprojResolveAssemblyReference.cache
+c:\users\asus\documents\visual studio 2017\Projects\Introduction to EntityFramework\Introduction to EntityFramework\bin\Debug\Introduction to EntityFramework.exe.config
+c:\users\asus\documents\visual studio 2017\Projects\Introduction to EntityFramework\Introduction to EntityFramework\bin\Debug\Introduction to EntityFramework.exe
+c:\users\asus\documents\visual studio 2017\Projects\Introduction to EntityFramework\Introduction to EntityFramework\bin\Debug\Introduction to EntityFramework.pdb
+c:\users\asus\documents\visual studio 2017\Projects\Introduction to EntityFramework\Introduction to EntityFramework\bin\Debug\EntityFramework.dll
+c:\users\asus\documents\visual studio 2017\Projects\Introduction to EntityFramework\Introduction to EntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\asus\documents\visual studio 2017\Projects\Introduction to EntityFramework\Introduction to EntityFramework\bin\Debug\EntityFramework.xml
+c:\users\asus\documents\visual studio 2017\Projects\Introduction to EntityFramework\Introduction to EntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\asus\documents\visual studio 2017\Projects\Introduction to EntityFramework\Introduction to EntityFramework\obj\Debug\Introduction to EntityFramework.exe
+c:\users\asus\documents\visual studio 2017\Projects\Introduction to EntityFramework\Introduction to EntityFramework\obj\Debug\Introduction to EntityFramework.pdb

@@ -1,0 +1,6 @@
+c:\users\asus\documents\visual studio 2017\Projects\EF Code First + OOP Intro Exercises\EF Code First + OOP Intro Exercises\bin\Debug\EF Code First + OOP Intro Exercises.exe.config
+c:\users\asus\documents\visual studio 2017\Projects\EF Code First + OOP Intro Exercises\EF Code First + OOP Intro Exercises\bin\Debug\EF Code First + OOP Intro Exercises.exe
+c:\users\asus\documents\visual studio 2017\Projects\EF Code First + OOP Intro Exercises\EF Code First + OOP Intro Exercises\bin\Debug\EF Code First + OOP Intro Exercises.pdb
+c:\users\asus\documents\visual studio 2017\Projects\EF Code First + OOP Intro Exercises\EF Code First + OOP Intro Exercises\obj\Debug\EF Code First + OOP Intro Exercises.csprojResolveAssemblyReference.cache
+c:\users\asus\documents\visual studio 2017\Projects\EF Code First + OOP Intro Exercises\EF Code First + OOP Intro Exercises\obj\Debug\EF Code First + OOP Intro Exercises.exe
+c:\users\asus\documents\visual studio 2017\Projects\EF Code First + OOP Intro Exercises\EF Code First + OOP Intro Exercises\obj\Debug\EF Code First + OOP Intro Exercises.pdb
