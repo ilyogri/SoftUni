@@ -96,9 +96,6 @@ ipch/
 *.vspx
 *.sap
 
-# Visual Studio Trace Files
-*.e2e
-
 # TFS 2012 Local Workspace
 $tf/
 
@@ -118,10 +115,6 @@ _TeamCity*
 
 # DotCover is a Code Coverage Tool
 *.dotCover
-
-# AxoCover is a Code Coverage Tool
-.axoCover/*
-!.axoCover/settings.json
 
 # Visual Studio code coverage results
 *.coverage
@@ -171,11 +164,11 @@ PublishScripts/
 # NuGet Packages
 *.nupkg
 # The packages folder can be ignored because of Package Restore
-**/[Pp]ackages/*
+**/packages/*
 # except build/, which is used as an MSBuild target.
-!**/[Pp]ackages/build/
+!**/packages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
-#!**/[Pp]ackages/repositories.config
+#!**/packages/repositories.config
 # NuGet v3's project.json files produces more ignorable files
 *.nuget.props
 *.nuget.targets
@@ -300,6 +293,3 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
-
-# OpenCover UI analysis results
-OpenCover/
