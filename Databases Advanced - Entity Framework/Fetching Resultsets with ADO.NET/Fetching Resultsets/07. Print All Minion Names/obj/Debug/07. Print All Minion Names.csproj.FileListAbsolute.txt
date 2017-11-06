@@ -1,6 +1,0 @@
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\07. Print All Minion Names\bin\Debug\_07.Print_All_Minion_Names.exe.config
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\07. Print All Minion Names\bin\Debug\_07.Print_All_Minion_Names.exe
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\07. Print All Minion Names\bin\Debug\_07.Print_All_Minion_Names.pdb
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\07. Print All Minion Names\obj\Debug\07. Print All Minion Names.csprojResolveAssemblyReference.cache
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\07. Print All Minion Names\obj\Debug\_07.Print_All_Minion_Names.exe
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\07. Print All Minion Names\obj\Debug\_07.Print_All_Minion_Names.pdb

@@ -1,6 +1,0 @@
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\05. Change Town Names Casing\bin\Debug\_05.Change_Town_Names_Casing.exe.config
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\05. Change Town Names Casing\bin\Debug\_05.Change_Town_Names_Casing.exe
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\05. Change Town Names Casing\bin\Debug\_05.Change_Town_Names_Casing.pdb
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\05. Change Town Names Casing\obj\Debug\05. Change Town Names Casing.csprojResolveAssemblyReference.cache
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\05. Change Town Names Casing\obj\Debug\_05.Change_Town_Names_Casing.exe
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\05. Change Town Names Casing\obj\Debug\_05.Change_Town_Names_Casing.pdb

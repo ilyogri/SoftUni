@@ -1,6 +1,0 @@
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\08. Increase Minions Age\bin\Debug\_08.Increase_Minions_Age.exe.config
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\08. Increase Minions Age\bin\Debug\_08.Increase_Minions_Age.exe
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\08. Increase Minions Age\bin\Debug\_08.Increase_Minions_Age.pdb
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\08. Increase Minions Age\obj\Debug\08. Increase Minions Age.csprojResolveAssemblyReference.cache
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\08. Increase Minions Age\obj\Debug\_08.Increase_Minions_Age.exe
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\08. Increase Minions Age\obj\Debug\_08.Increase_Minions_Age.pdb

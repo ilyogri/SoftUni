@@ -1,6 +1,0 @@
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\06. Remove Villain\bin\Debug\_06.Remove_Villain.exe.config
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\06. Remove Villain\bin\Debug\_06.Remove_Villain.exe
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\06. Remove Villain\bin\Debug\_06.Remove_Villain.pdb
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\06. Remove Villain\obj\Debug\06. Remove Villain.csprojResolveAssemblyReference.cache
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\06. Remove Villain\obj\Debug\_06.Remove_Villain.exe
-C:\Users\ASUS\Documents\Visual Studio 2017\Projects\Fetching Resultsets\06. Remove Villain\obj\Debug\_06.Remove_Villain.pdb

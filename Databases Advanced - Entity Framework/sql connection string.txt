@@ -1,4 +1,0 @@
- SqlConnection dbCon = new SqlConnection(
-                @"Server=.;
-                Database=SoftUni;
-                Integrated Security=true");

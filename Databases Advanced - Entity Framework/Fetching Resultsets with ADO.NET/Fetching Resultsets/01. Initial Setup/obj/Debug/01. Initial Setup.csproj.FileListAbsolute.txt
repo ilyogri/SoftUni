@@ -1,6 +1,0 @@
-c:\users\asus\documents\visual studio 2017\Projects\Fetching Resultsets\01. Initial Setup\bin\Debug\_01.Initial_Setup.exe.config
-c:\users\asus\documents\visual studio 2017\Projects\Fetching Resultsets\01. Initial Setup\bin\Debug\_01.Initial_Setup.exe
-c:\users\asus\documents\visual studio 2017\Projects\Fetching Resultsets\01. Initial Setup\bin\Debug\_01.Initial_Setup.pdb
-c:\users\asus\documents\visual studio 2017\Projects\Fetching Resultsets\01. Initial Setup\obj\Debug\01. Initial Setup.csprojResolveAssemblyReference.cache
-c:\users\asus\documents\visual studio 2017\Projects\Fetching Resultsets\01. Initial Setup\obj\Debug\_01.Initial_Setup.exe
-c:\users\asus\documents\visual studio 2017\Projects\Fetching Resultsets\01. Initial Setup\obj\Debug\_01.Initial_Setup.pdb
