@@ -1,0 +1,27 @@
+package com.company.Expression;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
+
+import static java.util.Collections.reverseOrder;
+
+public class LargestThreeNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); //reads input
+        String inputLine = scanner.nextLine(); //gets the input line
+        String[] numsString = inputLine.split("[\\s]"); //splits the input to array of strings
+        ArrayList<Integer> nums = new ArrayList<>(); //declaring the list of integers
+
+        for (int i = 0; i < numsString.length; i++){
+            int currentNumber = Integer.parseInt(numsString[i]); //declaring the current number
+            nums.add(currentNumber); //adding the number to the list
+        }
+
+        nums.stream()
+        .sorted(reverseOrder())  //sorts the list by descending
+        .limit(3) //print only 3 (or less)
+        .forEach(System.out::println);
+    }
+}

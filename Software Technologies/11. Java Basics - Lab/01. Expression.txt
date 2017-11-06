@@ -1,0 +1,7 @@
+public class CalculateExpression {
+
+    public static void main(String[] args) {
+        double calculation = Math.abs((30 + 21) * 1/2.0 * (35 - 12 - 1/2.0));
+        System.out.println(calculation * calculation);
+    }
+}

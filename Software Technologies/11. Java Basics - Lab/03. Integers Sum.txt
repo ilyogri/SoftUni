@@ -1,0 +1,51 @@
+package com.company.Expression;
+
+import java.sql.Array;
+import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ThreeIntegersSum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int sum = scanner.nextInt();
+Calculate(num1,num2,sum);
+//        int[] arr = {num1, num2, sum};
+//        Arrays.sort(arr);
+//
+//        if(arr[0] + arr[1] == arr[2]){
+//            System.out.printf("%d + %d = %d", arr[0], arr[1], arr[2]);
+//        } else {
+//            System.out.println("No");
+//        }
+    }
+
+    public static void Calculate(int num1, int num2, int sum) {
+        if (num1 > num2) {
+            int temp = num1;
+            num1 = num2;
+            num2 = temp;
+        }  if(num1 > sum) {
+            int temp = num1;
+            num1 = sum;
+            sum = temp;
+        }  if(num2 > sum) {
+            int temp = num2;
+            num2 = sum;
+            sum = temp;
+        }
+
+        if (num1 + num2 == sum) {
+            System.out.println(MessageFormat.format("{0} + {1} = {2}", num1, num2, sum));
+        } else if (num1 + sum == num2) {
+            System.out.println(MessageFormat.format("{0} + {1} = {2}", num1, sum, num2));
+        } else if (num2 + sum == num1) {
+            System.out.println(MessageFormat.format("{0} + {1} = {2}", num2, sum, num1));
+        } else {
+            System.out.println("No");
+        }
+    }
+}
