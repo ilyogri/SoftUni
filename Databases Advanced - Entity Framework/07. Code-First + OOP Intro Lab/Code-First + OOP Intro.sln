@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballManager", "FootballManager\FootballManager.csproj", "{BDAC534E-CDF2-4C8A-ABB7-AFD81E45F1FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDAC534E-CDF2-4C8A-ABB7-AFD81E45F1FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDAC534E-CDF2-4C8A-ABB7-AFD81E45F1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDAC534E-CDF2-4C8A-ABB7-AFD81E45F1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDAC534E-CDF2-4C8A-ABB7-AFD81E45F1FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
