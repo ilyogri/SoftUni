@@ -1,6 +1,0 @@
-SELECT CONCAT(mech.FirstName, ' ', mech.LastName),
-AVG(DATEPART(DAYOFYEAR, j.FinishDate) - DATEPART(DAYOFYEAR, j.IssueDate)) AS [Average Days]
-FROM Mechanics AS mech
-JOIN Jobs AS j ON j.MechanicId = mech.MechanicId
-GROUP BY CONCAT(mech.FirstName, ' ', mech.LastName), mech.MechanicId
-ORDER BY mech.MechanicId

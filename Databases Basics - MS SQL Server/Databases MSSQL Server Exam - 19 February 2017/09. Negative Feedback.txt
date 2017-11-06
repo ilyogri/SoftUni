@@ -1,6 +1,0 @@
-SELECT fb.ProductId, fb.Rate, fb.Description, fb.CustomerId, cms.Age, cms.Gender
-FROM Feedbacks AS fb
-INNER JOIN Customers AS cms ON fb.CustomerId = cms.Id
-WHERE fb.Rate < 5.0
-ORDER BY fb.ProductId DESC,
-fb.Rate

@@ -1,7 +1,0 @@
-SELECT a.AirportID, a.AirportName, COUNT(*) AS Passengers FROM Flights AS f
-JOIN Airports AS a ON a.AirportID = f.OriginAirportID
-JOIN Tickets AS t ON f.FlightID = t.FlightID
-WHERE f.Status = 'Departing' 
-GROUP BY a.AirportID, a.AirportName
-HAVING COUNT(*) > 0
-ORDER BY a.AirportID

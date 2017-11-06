@@ -1,4 +1,0 @@
-SELECT Title, IsActive FROM Chats
-WHERE (IsActive = 'false'
-AND ((LEN(Title) < 5)) OR (SUBSTRING(Title, 3, 1) + SUBSTRING(Title, 4, 1)) = 'tl')
-ORDER BY Title DESC

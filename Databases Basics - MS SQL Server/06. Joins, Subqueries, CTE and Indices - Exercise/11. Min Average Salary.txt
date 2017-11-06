@@ -1,3 +1,0 @@
-SELECT TOP(1) sAvg.MinAverageSalary FROM  ( SELECT DepartmentID, AVG(Salary) AS MinAverageSalary
-FROM Employees
-GROUP BY DepartmentID) AS sAvg ORDER BY sAvg.MinAverageSalary ASC

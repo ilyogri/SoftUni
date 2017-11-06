@@ -1,8 +1,0 @@
-SELECT DISTINCT c.CustomerID, CONCAT(FirstName, ' ', LastName) AS FullName, tw.TownName AS HomeTown 
-FROM Flights AS f
-JOIN Tickets AS t ON t.FlightID = f.FlightID
-JOIN Customers AS c ON c.CustomerID = t.CustomerID
-JOIN Towns AS tw ON c.HomeTownID = tw.TownID
-JOIN Airports AS a ON a.AirportID = f.OriginAirportID
-WHERE c.HomeTownID = a.TownID
-ORDER BY c.CustomerID

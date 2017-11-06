@@ -1,9 +1,0 @@
-Removing the primary key:
-
-ALTER TABLE Users
-DROP CONSTRAINT [PK__Users__3214EC07B36CC9B5];
-
-Adding the primary key:
-
-ALTER TABLE Users
-ADD CONSTRAINT PK_Users PRIMARY KEY (Id, Username);

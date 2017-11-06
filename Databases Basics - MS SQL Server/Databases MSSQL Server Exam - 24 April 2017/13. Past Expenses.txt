@@ -1,9 +1,0 @@
-SELECT j.JobId, CASE WHEN SUM(p.Price) IS NULL THEN '0.00'
- ELSE SUM(p.Price * ordP.Quantity) END AS Total
- FROM Parts AS p
-FULL JOIN OrderParts AS ordP ON ordP.PartId = p.PartId
-FULL JOIN Orders AS ord ON ord.OrderId = ordP.OrderId
-FULL JOIN Jobs AS j ON j.JobId = ord.JobId
-WHERE j.JobId IN (SELECT JobId FROM Jobs WHERE Status = 'Finished')
-GROUP BY ordP.Quantity, j.JobId
-ORDER BY Total DESC, j.JobId ASC

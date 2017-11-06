@@ -1,8 +1,0 @@
-SELECT TOP(3) c.CustomerID, CONCAT(FirstName, ' ', LastName) AS FullName,
-t.Price, a.AirportName
- FROM Customers AS c
-JOIN Tickets AS t ON t.CustomerID = c.CustomerID
-JOIN Flights AS f ON f.FlightID = t.FlightID
-JOIN Airports AS a ON a.AirportID = f.DestinationAirportID
-WHERE f.Status = 'Delayed'
-ORDER BY Price DESC, c.CustomerID

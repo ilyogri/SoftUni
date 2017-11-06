@@ -1,6 +1,0 @@
-SELECT COUNT(a.Id) AS AdsCount, ISNULL (t.Name, '(no town)') AS Town
-FROM Ads AS a
-LEFT JOIN Towns AS t ON t.Id = a.TownId
-GROUP BY t.Name
-HAVING COUNT(a.Id) IN (2, 3)
-ORDER BY t.Name

@@ -1,7 +1,0 @@
-select asd.ContinentCode, asd.CurrencyCode, asd.Countt from
- (
- select c.ContinentCode, c.CurrencyCode, COUNT(c.CurrencyCode) as Countt, DENSE_RANK() over (partition by c.ContinentCode order by COUNT(c.CurrencyCode) desc) as rankk from Countries c
-
-group by c.ContinentCode, c.CurrencyCode) as asd
-where asd.rankk = 1 and asd.Countt <> 1
-

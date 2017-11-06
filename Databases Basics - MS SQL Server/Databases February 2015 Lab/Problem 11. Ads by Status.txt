@@ -1,9 +1,0 @@
-SELECT
-ast.Status, COUNT(*) AS Count
-FROM 
-Ads AS a
-JOIN AdStatuses AS ast ON ast.Id = a.StatusId
-GROUP BY
-Status
-ORDER BY
-Status
