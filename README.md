@@ -14,3 +14,5 @@
 |---|---|
 |<a href="https://softuni.bg/trainings/1560/programming-basics-bulgaria-january-2017" > Programming Basics </a>   | <a href="https://softuni.bg/certificates/details/17968/ff9d608e"> Link</a> |
 |<a href="https://softuni.bg/trainings/1619/programming-fundamentals-may-2017"> Programming Fundamentals </a>| <a href="https://softuni.bg/certificates/details/21200/06296ccf"> Link</a> |
+|<a href="https://softuni.bg/trainings/1621/software-technologies-july-2017"> Software Technologies </a>| <a href="https://softuni.bg/certificates/details/22762/5aedc23b"> Link</a> |
+|<a href="https://softuni.bg/trainings/1747/databases-basics-mssql-server-september-2017"> Databases Basics - MS SQL Server </a>| <a href="https://softuni.bg/certificates/details/23834/67a6528b"> Link</a> |
