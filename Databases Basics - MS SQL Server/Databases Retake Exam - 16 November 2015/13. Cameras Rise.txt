@@ -1,0 +1,43 @@
+UPDATE Cameras
+SET Price = Price + (
+(SELECT AVG(Price) FROM Cameras WHERE ManufacturerId = c.ManufacturerId)
+*
+(SELECT LEN(Name) / 100.00 FROM Manufacturers WHERE Id = c.ManufacturerId)
+					)
+FROM Cameras c
+
+SELECT a.Model, a.Price, a.ManufacturerId
+FROM
+(SELECT Model, Price, ManufacturerId, RANK() OVER (PARTITION BY ManufacturerId ORDER BY Price DESC) AS [Rank]
+FROM Cameras) a
+WHERE a.Rank <= 3
+AND a.Price IS NOT NULL
+ORDER BY
+a.ManufacturerId, a.Price, a.Model
+
+
+
+Model,Price,ManufacturerId
+K-3,1034.0737,4
+K-5 II,1053.0737,4
+645Z,8079.0737,4
+EOS 760D,1347.4538,5
+EOS 7D Mark II,2297.4538,5
+5DS,3948.4538,5
+X-T10,847.5538,6
+X100T,1347.5538,6
+X-T1,1947.5538,6
+C (Typ 112),738.20,7
+X Vario,2168.20,7
+D7200,1706.4273,11
+D750,3759.4273,11
+D810,4759.4273,11
+NX30,840.0689,12
+NX1,1343.0689,12
+Galaxy NX,1443.0689,12
+Lumix DMC-LX100,785.705,18
+Lumix DMC-GH3,958.705,18
+Lumix DMC G7,1158.705,18
+Alpha 7 II,1757.77,19
+Alpha 7S,2557.77,19
+Alpha 7R II,3257.77,19

@@ -1,0 +1,13 @@
+CREATE PROC udp_SendMessage(@UserId INT, @ChatId INT, @Content VARCHAR(MAX))
+AS
+BEGIN TRAN
+	IF((SELECT COUNT(*) FROM Messages WHERE UserId = @UserId AND @ChatId = ChatId) = 0)
+	BEGIN
+		ROLLBACK;
+		RAISERROR ('There is no chat with that user!', 16, 1);
+		RETURN
+	END
+
+	INSERT INTO Messages(Content, SentOn, ChatId, UserId)
+    VALUES(@Content, GETDATE(), @ChatId, @UserId)
+COMMIT

@@ -1,0 +1,35 @@
+--CREATE FUNCTION fn_TeamsJSON() RETURNS TABLE
+--AS RETURN
+
+SELECT
+	ht.TeamName AS name,
+	 (
+						  SELECT ht2.TeamName AS f, at.TeamName FROM Teams AS ht2
+						  JOIN Teams AS at2
+						  ON at2.Id = at.Id
+						  WHERE ht2.Id = ht.Id
+						  ORDER BY ht2.TeamName
+						  FOR JSON PATH) AS matches --matches.TeamName, matches.HomeGoals, matches.AwayTeam, matches.AwayGoals, matches.MatchDate
+FROM 
+	TeamMatches AS tm
+	--, (
+	--			 SELECT 
+	--					ht.TeamName, tm.HomeGoals, at.TeamName AS AwayTeam, tm.AwayGoals, tm.MatchDate 
+	--			 FROM TeamMatches AS tm 
+	--			 JOIN Teams AS ht ON ht.Id = tm.HomeTeamId JOIN Teams AS at ON at.Id = tm.AwayTeamId
+	--			 WHERE ht.TeamName = 'Beroe' OR at.TeamName = 'Beroe') AS matches
+JOIN Teams AS ht
+	ON ht.Id = tm.HomeTeamId
+JOIN Teams AS at
+	ON at.Id = tm.AwayTeamId
+WHERE 
+	ht.CountryCode = 'BG'
+ORDER BY
+	ht.TeamName
+FOR JSON AUTO, ROOT('teams')
+
+
+SELECT ht.TeamName, at.TeamName FROM TeamMatches AS tm
+JOIN Teams AS ht ON ht.Id = tm.HomeTeamId
+JOIN Teams AS at ON at.Id = tm.AwayTeamId
+WHERE ht.TeamName = 'Beroe' OR at.TeamName = 'Beroe'

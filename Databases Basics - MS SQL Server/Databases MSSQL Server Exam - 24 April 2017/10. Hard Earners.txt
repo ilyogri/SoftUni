@@ -1,0 +1,7 @@
+SELECT CONCAT(mech.FirstName, ' ', mech.LastName) AS Mechanic , COUNT(j.JobId) AS Jobs
+FROM Mechanics AS mech
+JOIN Jobs AS j ON j.MechanicId = mech.MechanicId
+WHERE j.Status <> 'Finished'
+GROUP BY CONCAT(mech.FirstName, ' ', mech.LastName), mech.MechanicId
+HAVING COUNT(j.JobId) > 1
+ORDER BY Jobs DESC, mech.MechanicId

@@ -1,0 +1,10 @@
+SELECT l.LeagueName AS [League Name], COUNT(t.TeamName) AS Teams,
+ (SELECT ISNULL(COUNT(*),0) FROM TeamMatches AS tm 
+ WHERE LeagueId = l.Id) AS Matches,
+ (SELECT ISNULL(AVG(HomeGoals + AwayGoals), 0) FROM TeamMatches
+ WHERE LeagueId = l.Id) AS [Average Goals]
+FROM Leagues AS l
+FULL JOIN Leagues_Teams AS lt ON l.Id = lt.LeagueId
+FULL JOIN Teams AS t ON lt.TeamId = t.Id
+GROUP BY l.LeagueName, l.Id
+ORDER BY Teams DESC, Matches DESC

@@ -1,0 +1,6 @@
+SELECT hcc.CountryName AS [Home Team], acc.CountryName AS [Away Team],
+ im.MatchDate AS [Match Date]
+FROM InternationalMatches AS im
+JOIN Countries AS hcc ON hcc.CountryCode = im.HomeCountryCode
+JOIN Countries AS acc ON acc.CountryCode = im.AwayCountryCode
+ORDER BY [Match Date] DESC

@@ -1,0 +1,16 @@
+SELECT
+u.Username, u.FullName, u.BirthDate, ISNULL (p.Title, 'No photos') AS Photo 
+FROM
+Users AS u
+FULL JOIN Photographs AS p ON p.UserId = u.Id
+WHERE
+DATEPART(MONTH, u.BirthDate) = 1
+ORDER BY 
+u.FullName
+
+Username,FullName,BirthDate,Photo
+ben,Ben Ford,1985-01-07 00:00:00.000,Time of poets
+casper,Casoer Beyer,1983-01-31 00:00:00.000,No photos
+Lingfeng,Lingfeng Zhuang,1985-01-23 00:00:00.000,No photos
+Petya,Petya Grozdarska,1986-01-12 00:00:00.000,No photos
+StefSan,Stefano Sanfilippo,1982-01-26 00:00:00.000,No photos

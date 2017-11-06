@@ -1,0 +1,18 @@
+SELECT 
+	c.CountryName AS [Country Name],
+	COUNT(DISTINCT im.Id) AS [International Matches], 
+	COUNT(DISTINCT tm.Id) AS [Team Matches]
+FROM 
+	Countries AS c
+LEFT JOIN Leagues AS l
+	ON l.CountryCode = c.CountryCode
+LEFT JOIN TeamMatches AS tm
+	ON tm.LeagueId = l.Id
+LEFT JOIN InternationalMatches AS im
+	ON im.AwayCountryCode = c.CountryCode OR im.HomeCountryCode = c.CountryCode
+GROUP BY
+	c.CountryName
+HAVING 
+	COUNT(DISTINCT im.Id) > 0 OR COUNT(DISTINCT tm.Id) > 0
+ORDER BY
+	[International Matches] DESC, [Team Matches] DESC, [Country Name]

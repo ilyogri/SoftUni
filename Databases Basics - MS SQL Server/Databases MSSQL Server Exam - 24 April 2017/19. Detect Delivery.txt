@@ -1,0 +1,15 @@
+CREATE TRIGGER tr_Detect_Delivery ON Orders AFTER UPDATE
+AS BEGIN
+  IF UPDATE (Delivered)
+  BEGIN
+   IF(1 = (
+		   SELECT i.Delivered FROM inserted AS i
+		   JOIN deleted AS d ON i.OrderId = d.OrderId
+		   AND i.Delivered <> d.Delivered)
+		   )
+    BEGIN
+	 UPDATE Parts
+	 SET StockQty += Quantity FROM OrderParts AS op WHERE op.OrderId = (SELECT OrderId FROM inserted)
+    END
+  END
+END

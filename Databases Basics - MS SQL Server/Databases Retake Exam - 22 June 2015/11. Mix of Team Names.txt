@@ -1,0 +1,4 @@
+SELECT LOWER(t.TeamName) + RIGHT(REVERSE(LOWER(t2.TeamName)), LEN(t2.TeamName) - 1) AS Mix
+FROM Teams AS t
+JOIN Teams AS t2 ON RIGHT(LOWER(t.TeamName), 1) = LEFT(REVERSE(LOWER(t2.TeamName)), 1)
+ORDER BY Mix

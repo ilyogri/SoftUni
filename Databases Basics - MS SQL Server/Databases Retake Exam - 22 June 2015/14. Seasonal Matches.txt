@@ -1,0 +1,46 @@
+ALTER TABLE Leagues
+ADD IsSeasonal BIT DEFAULT 0
+
+INSERT INTO TeamMatches(HomeTeamId, AwayTeamId, HomeGoals, AwayGoals, MatchDate, LeagueId)
+VALUES (
+		 (SELECT Id FROM Teams WHERE TeamName = 'Empoli'),
+		 (SELECT Id FROM Teams WHERE TeamName = 'Parma'),
+		 2,
+		 2,
+		 '19-Apr-2015 16:00',
+		 (SELECT Id FROM Leagues WHERE LeagueName = 'Italian Serie A')
+	   )
+
+INSERT INTO TeamMatches(HomeTeamId, AwayTeamId, HomeGoals, AwayGoals, MatchDate, LeagueId)
+VALUES (
+		 (SELECT Id FROM Teams WHERE TeamName = 'Internazionale'),
+		 (SELECT Id FROM Teams WHERE TeamName = 'AC Milan'),
+		 0,
+		 0,
+		 '19-Apr-2015 21:45',
+		 (SELECT Id FROM Leagues WHERE LeagueName = 'Italian Serie A')
+	   )
+
+UPDATE Leagues
+SET IsSeasonal = 1
+WHERE Id IN (SELECT LeagueId FROM TeamMatches)
+
+
+SELECT
+	ht.TeamName AS [Home Team],
+	tm.HomeGoals AS [Home Goals],
+	at.TeamName AS [Away Team],
+	tm.AwayGoals AS [Away Goals],
+	l.LeagueName AS [League Name]
+FROM
+	TeamMatches AS tm
+JOIN Teams AS ht
+	ON ht.Id = tm.HomeTeamId
+JOIN Teams AS at
+	ON at.Id = tm.AwayTeamId
+JOIN Leagues AS l
+	ON l.Id = tm.LeagueId
+WHERE
+	tm.MatchDate > '10-Apr-2015'
+ORDER BY
+	l.LeagueName, tm.HomeGoals DESC, tm.AwayGoals DESC

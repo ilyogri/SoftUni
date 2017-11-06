@@ -1,0 +1,26 @@
+CREATE TABLE FriendlyMatches
+(
+	Id INT IDENTITY PRIMARY KEY,
+	HomeTeamID INT NOT NULL,
+	AwayTeamId INT NOT NULL,
+	MatchDate DATETIME,
+	CONSTRAINT FK_FriendlyHMatches_Teams
+	FOREIGN KEY(HomeTeamID) REFERENCES Teams(Id),
+	CONSTRAINT FK_FriendlyAMatches_Teams
+	FOREIGN KEY(AwayTeamId) REFERENCES Teams(Id)
+)
+
+
+
+SELECT
+	htn.TeamName AS [Home Team], atn.TeamName AS [Away Team], a.MatchDate AS [Match Date]
+FROM
+	(SELECT fm.HomeTeamID, fm.AwayTeamId, fm.MatchDate FROM FriendlyMatches AS fm
+UNION
+	SELECT tm.HomeTeamId, tm.AwayTeamId, tm.MatchDate FROM TeamMatches AS tm) AS a
+JOIN Teams AS atn
+	ON atn.Id = a.AwayTeamId
+JOIN Teams AS htn
+	ON htn.Id = a.HomeTeamID
+ORDER BY
+	[Match Date] DESC

@@ -1,0 +1,15 @@
+SELECT Title, Link, Description, c.Name AS CategoryName, u.FullName AS Author
+FROM Photographs AS p
+INNER JOIN Categories AS c ON c.Id = p.CategoryId
+INNER JOIN Users AS u ON u.Id = p.UserId
+WHERE Description IS NOT NULL
+ORDER BY Title
+
+
+Title,Link,Description,CategoryName,Author
+Best Photo Ever,http://photo-forum.net/i/1920515,Period !,Portrait,Alexandra Svilarova
+Dog,http://photo-forum.net/i/1920281,Aint he a fluffy bag?,Street,Daniel Bocksteger
+Sitting on a tree...,http://photo-forum.net/i/1920004,Self-descriptive,Nature,Arpan Buch
+They are coming,http://photo-forum.net/i/1920370,Hide your kids,Street,Adriano Abatangelo
+Tilma Lek,http://photo-forum.net/i/1920390,https://www.youtube.com/watch?v=wJN9GN0xzdk,Street,Svetlin Nakov
+Time of poets,http://photo-forum.net/i/1920110,Tsarevo is the place,Portrait,Ben Ford

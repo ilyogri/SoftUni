@@ -1,0 +1,11 @@
+UPDATE Tickets
+SET Price += (Price * 0.5)
+WHERE FlightID IN (
+					SELECT f.FlightID FROM Airlines AS a
+					JOIN Flights AS f ON f.AirlineID = a.AirlineID
+					JOIN Tickets AS t ON t.FlightID = f.FlightID
+					WHERE a.AirlineID = (
+										 SELECT TOP(1) AirlineID FROM Airlines
+										 ORDER BY Rating DESC
+										  )
+					 )

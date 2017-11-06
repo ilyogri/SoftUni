@@ -1,0 +1,13 @@
+SELECT TOP 1 WITH TIES
+ m.Name AS Model, COUNT(*) AS [Times Serviced],
+ (SELECT ISNULL(SUM(p.Price * op.Quantity), 0) 
+  FROM Jobs AS j
+  FULL JOIN Orders AS o ON o.JobId = j.JobId
+  FULL JOIN OrderParts AS op ON op.OrderId = o.OrderId
+  FULL JOIN Parts AS p ON p.PartId = op.PartId
+  WHERE m.ModelId = ModelId
+  ) AS [Parts Total]
+FROM Models AS m
+FULL JOIN Jobs AS j ON j.ModelId = m.ModelId
+GROUP BY m.ModelId, m.Name
+ORDER BY [Times Serviced] DESC

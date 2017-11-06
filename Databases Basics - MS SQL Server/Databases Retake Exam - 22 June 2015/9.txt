@@ -1,0 +1,6 @@
+SELECT t.TeamName, (SELECT SUM(HomeGoals + AwayGoals) FROM TeamMatches WHERE HomeTeamId = t.Id) AS [Total Goals]
+--SUM(tm.HomeGoals) + SUM(im.AwayGoals) AS [Total Goals]
+FROM Teams AS t
+--FULL JOIN TeamMatches AS tm ON tm.AwayTeamId = t.Id OR tm.HomeTeamId = t.Id
+GROUP BY t.TeamName, t.Id
+ORDER BY [Total Goals] DESC, t.TeamName

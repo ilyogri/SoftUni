@@ -1,0 +1,20 @@
+Declare @ID as varchar(500)
+Declare @Name as varchar(30)
+Declare @MOBILE as varchar(20)
+ 
+Declare MY_data CURSOR FOR
+ 
+Select Name ,Mobile from  My_table (Nolock)
+ 
+OPEN MY_data
+    FETCH NEXT FROM MY_data INTO @Name ,@MOBILE
+        WHILE @@FETCH_STATUS = 0
+        BEGIN
+ 
+            Set @ID = (Generate Max ID)
+            Insert Records @ID,@Name ,@MOBILE
+ 
+        FETCH NEXT FROM MY_data INTO @Name ,@MOBILE
+        END
+    CLOSE MY_data
+DEALLOCATE MY_data

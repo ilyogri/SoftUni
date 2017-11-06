@@ -1,0 +1,5 @@
+SELECT
+a.Title, t.Name AS Town
+FROM
+Ads AS a
+LEFT JOIN Towns AS t ON t.Id = a.TownId

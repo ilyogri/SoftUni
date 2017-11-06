@@ -1,0 +1,16 @@
+SELECT a.Available FROM 
+						(SELECT 
+						  CONCAT(m.FirstName, ' ', m.LastName) 
+						  AS Available, m.MechanicId 
+						 FROM Mechanics AS m
+						 LEFT JOIN Jobs AS j 
+						 ON j.MechanicId = m.MechanicId
+						 WHERE m.MechanicId NOT IN (
+													SELECT m.MechanicId FROM Mechanics AS m
+													LEFT JOIN Jobs AS j ON
+													j.MechanicId = m.MechanicId
+													WHERE j.Status <> 'Finished'
+												   )
+GROUP BY m.MechanicId, CONCAT(m.FirstName, ' ', m.LastName)
+						) AS a
+ORDER BY a.MechanicId

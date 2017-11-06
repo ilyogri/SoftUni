@@ -1,0 +1,6 @@
+SELECT ISNULL(SUM(p.Price * op.Quantity), 0) AS [Parts Total]
+FROM Parts AS p
+FULL JOIN OrderParts AS op ON op.PartId = p.PartId
+FULL JOIN Orders AS o ON o.OrderId = op.OrderId
+WHERE IssueDate >= '04-03-2017'
+AND IssueDate <= '04-24-2017'

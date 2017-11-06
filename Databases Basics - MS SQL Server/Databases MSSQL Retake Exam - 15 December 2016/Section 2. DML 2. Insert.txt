@@ -1,0 +1,77 @@
+INSERT INTO Messages(Content, SentOn, ChatId, UserId)
+SELECT (CONCAT(u.Age,'-', u.Gender, '-', l.Latitude,'-', l.Longitude))
+, GETDATE(), CEILING(POWER((u.Age / 18), 3)), 10
+FROM Users AS u
+JOIN Locations AS l ON l.Id = u.LocationId
+WHERE u.Id = 10
+
+
+INSERT INTO Messages(Content, SentOn, ChatId, UserId)
+SELECT (CONCAT(u.Age,'-', u.Gender, '-', l.Latitude,'-', l.Longitude))
+, GETDATE(), CEILING(POWER((u.Age / 18), 3)), 11
+FROM Users AS u
+JOIN Locations AS l ON l.Id = u.LocationId
+WHERE u.Id = 11
+
+INSERT INTO Messages(Content, SentOn, ChatId, UserId)
+SELECT (CONCAT(u.Age,'-', u.Gender, '-', l.Latitude,'-', l.Longitude))
+, GETDATE(), (CEILING(SQRT(u.Age * 2))), 12
+FROM Users AS u
+JOIN Locations AS l ON l.Id = u.LocationId
+WHERE u.Id = 12
+
+INSERT INTO Messages(Content, SentOn, ChatId, UserId)
+SELECT (CONCAT(u.Age,'-', u.Gender, '-', l.Latitude,'-', l.Longitude))
+, GETDATE(), CEILING(POWER((u.Age / 18), 3)), 13
+FROM Users AS u
+JOIN Locations AS l ON l.Id = u.LocationId
+WHERE u.Id = 13
+
+INSERT INTO Messages(Content, SentOn, ChatId, UserId)
+SELECT (CONCAT(u.Age,'-', u.Gender, '-', l.Latitude,'-', l.Longitude))
+, GETDATE(), CEILING(POWER((u.Age / 18), 3)), 14
+FROM Users AS u
+JOIN Locations AS l ON l.Id = u.LocationId
+WHERE u.Id = 14
+
+INSERT INTO Messages(Content, SentOn, ChatId, UserId)
+SELECT (CONCAT(u.Age,'-', u.Gender, '-', l.Latitude,'-', l.Longitude))
+, GETDATE(), (CEILING(SQRT(u.Age * 2))), 15
+FROM Users AS u
+JOIN Locations AS l ON l.Id = u.LocationId
+WHERE u.Id = 15
+
+INSERT INTO Messages(Content, SentOn, ChatId, UserId)
+SELECT (CONCAT(u.Age,'-', u.Gender, '-', l.Latitude,'-', l.Longitude))
+, GETDATE(), (CEILING(SQRT(u.Age * 2))), 16
+FROM Users AS u
+JOIN Locations AS l ON l.Id = u.LocationId
+WHERE u.Id = 16
+
+INSERT INTO Messages(Content, SentOn, ChatId, UserId)
+SELECT (CONCAT(u.Age,'-', u.Gender, '-', l.Latitude,'-', l.Longitude))
+, GETDATE(), CEILING(POWER((u.Age / 18), 3)), 17
+FROM Users AS u
+JOIN Locations AS l ON l.Id = u.LocationId
+WHERE u.Id = 17
+
+INSERT INTO Messages(Content, SentOn, ChatId, UserId)
+SELECT (CONCAT(u.Age,'-', u.Gender, '-', l.Latitude,'-', l.Longitude))
+, GETDATE(), (CEILING(SQRT(u.Age * 2))), 18
+FROM Users AS u
+JOIN Locations AS l ON l.Id = u.LocationId
+WHERE u.Id = 18
+
+INSERT INTO Messages(Content, SentOn, ChatId, UserId)
+SELECT (CONCAT(u.Age,'-', u.Gender, '-', l.Latitude,'-', l.Longitude))
+, GETDATE(), CEILING(POWER((u.Age / 18), 3)), 19
+FROM Users AS u
+JOIN Locations AS l ON l.Id = u.LocationId
+WHERE u.Id = 19
+
+INSERT INTO Messages(Content, SentOn, ChatId, UserId)
+SELECT (CONCAT(u.Age,'-', u.Gender, '-', l.Latitude,'-', l.Longitude))
+, GETDATE(), CEILING(POWER((u.Age / 18), 3)), 20
+FROM Users AS u
+JOIN Locations AS l ON l.Id = u.LocationId
+WHERE u.Id = 20

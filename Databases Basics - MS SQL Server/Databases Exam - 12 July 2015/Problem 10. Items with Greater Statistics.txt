@@ -1,0 +1,7 @@
+SELECT Name, Price, MinLevel, Strength, Defence, Speed, Luck, Mind
+FROM Items AS i
+JOIN [Statistics] AS s ON s.Id = i.StatisticId
+WHERE Speed > (SELECT AVG (Speed) FROM [Statistics])
+AND Luck > (SELECT AVG (Luck) FROM [Statistics])
+AND Mind > (SELECT AVG (Mind) FROM [Statistics])
+ORDER BY i.Name

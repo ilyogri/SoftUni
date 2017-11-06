@@ -1,0 +1,6 @@
+SELECT tm.MatchDate AS [First Date], tm2.MatchDate AS [Second Date]
+FROM TeamMatches AS tm
+JOIN TeamMatches AS tm2 ON tm.MatchDate < tm2.MatchDate
+WHERE DATEPART(DAY, tm.MatchDate) = DATEPART(DAY, tm2.MatchDate) 
+AND tm.MatchDate != tm2.MatchDate
+ORDER BY tm.MatchDate desc, tm2.MatchDate DESC

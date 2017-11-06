@@ -1,0 +1,6 @@
+SELECT t.TeamName AS Team, COUNT(*) AS [Matches Count]
+FROM Teams AS t
+JOIN TeamMatches AS tm ON tm.HomeTeamId = t.Id OR tm.AwayTeamId = t.Id
+GROUP BY t.TeamName
+HAVING COUNT(*) > 1
+ORDER BY Team

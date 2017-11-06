@@ -1,0 +1,16 @@
+
+SELECT TOP(5) a.Country, a.[Highest Peak Name], a.[Highest Peak Elevation], a.Mountain
+ FROM
+ (SELECT c.CountryName AS Country,
+  ISNULL(p.PeakName, '(no highest peak)' ) AS [Highest Peak Name],
+  ISNULL(MAX(p.Elevation), 0) AS [Highest Peak Elevation],
+  ISNULL(m.MountainRange, '(no mountain)') AS Mountain,
+  RANK() OVER (PARTITION BY c.CountryName ORDER BY p.Elevation DESC) AS Rank
+  FROM Countries AS c
+  LEFT JOIN MountainsCountries AS mc ON c.CountryCode = mc.CountryCode
+  LEFT JOIN Mountains AS m ON mc.MountainId = m.Id
+  LEFT JOIN Peaks AS p ON m.Id = p.MountainId
+  GROUP BY c.CountryName, p.PeakName, m.MountainRange, p.Elevation
+) AS a
+WHERE a.Rank = 1
+ORDER BY a.Country, a.[Highest Peak Name]

@@ -1,0 +1,45 @@
+CREATE PROCEDURE usp_PlaceOrder (@JobId INT, @SerialNumber VARCHAR(50), @Quantity INT)
+AS 
+BEGIN TRAN
+
+	IF(SELECT Status FROM Jobs WHERE JobId = @JobId) = 'Finished'
+	BEGIN
+	;THROW 50011, 'This job is not active!', 1
+	 ROLLBACK
+	END
+
+	IF(@Quantity = 0)
+	BEGIN
+	;THROW 50012, 'Part quantity must be more than zero!', 1
+	ROLLBACK
+	END
+
+	IF((SELECT COUNT() FROM Jobs WHERE JobId = @JobId) = 0)
+	BEGIN
+	;THROW 50013, 'Job not found!', 1
+	ROLLBACK
+	END
+
+	IF((SELECT COUNT() FROM Parts WHERE SerialNumber = @SerialNumber) = 0)
+	BEGIN
+	;THROW 50014, 'Part not found!', 1
+	ROLLBACK
+	END
+
+	IF((SELECT OrderId FROM Orders WHERE JobId = @JobId AND IssueDate IS NULL)  0)
+	BEGIN
+		INSERT INTO Orders(JobId, IssueDate)
+		VALUES(@JobId, NULL)
+
+		INSERT INTO OrderParts(OrderId, PartId, Quantity)
+		VALUES((SELECT OrderId FROM Orders WHERE JobId = @JobId), (SELECT PartId FROM Parts WHERE SerialNumber = @SerialNumber), 1)
+	END
+
+	ELSE IF ((SELECT OrderId FROM OrderParts WHERE PartId IN (SELECT PartId FROM Parts WHERE SerialNumber = @SerialNumber))  0)
+	BEGIN
+		UPDATE OrderParts
+		SET Quantity += 1
+		WHERE PartId IN (SELECT PartId FROM Parts WHERE SerialNumber = @SerialNumber)
+	END
+
+COMMIT

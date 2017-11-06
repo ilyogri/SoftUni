@@ -1,0 +1,7 @@
+SELECT t.TeamName AS [Team Name], l.LeagueName AS League,
+ ISNULL(c.CountryName, 'International') AS [League Country]
+FROM Teams AS t
+LEFT JOIN Leagues_Teams AS lt ON lt.TeamId = t.Id
+LEFT JOIN Leagues AS l ON l.Id = lt.LeagueId
+LEFT JOIN Countries AS c ON l.CountryCode = c.CountryCode
+ORDER BY [Team Name], League

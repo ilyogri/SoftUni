@@ -1,0 +1,8 @@
+SELECT j.JobId, ISNULL(SUM(p.Price * op.Quantity), '0.00') AS Total
+FROM Jobs AS j
+FULL JOIN Orders AS o ON o.JobId = j.JobId
+FULL JOIN OrderParts AS op ON op.OrderId = o.OrderId
+FULL JOIN Parts AS p ON p.PartId = op.PartId
+WHERE J.Status = 'Finished'
+GROUP BY j.JobId
+ORDER BY Total DESC, j.JobId

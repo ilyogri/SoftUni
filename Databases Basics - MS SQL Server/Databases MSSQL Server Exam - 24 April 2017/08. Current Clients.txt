@@ -1,0 +1,7 @@
+SELECT CONCAT(cl.FirstName, ' ', cl.LastName) AS Client,
+(DATEPART(DAY, '2017-04-24') - DATEPART(DAY, j.IssueDate)) AS [Days going],
+ j.Status
+FROM Clients AS cl
+JOIN Jobs AS j ON j.ClientId = cl.ClientId
+WHERE j.Status <> 'Finished'
+ORDER BY [Days going] DESC, cl.ClientId
