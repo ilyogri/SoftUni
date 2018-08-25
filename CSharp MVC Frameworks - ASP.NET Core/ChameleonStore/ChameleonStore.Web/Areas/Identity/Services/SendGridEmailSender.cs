@@ -12,7 +12,7 @@ namespace ChameleonStore.Web.Areas.Identity.Services
 {
     public class SendGridEmailSender : IEmailSender
     {
-        private const string ApiKey = "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";
+        private const string ApiKey = "";
 
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
         {

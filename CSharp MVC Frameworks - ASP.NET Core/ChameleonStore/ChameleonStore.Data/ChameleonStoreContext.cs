@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ChameleonStore.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-
-namespace ChameleonStore.Web.Data
+﻿namespace ChameleonStore.Web.Data
 {
+    using ChameleonStore.Data.EntityConfig;
+    using ChameleonStore.Models;
+    using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore;
+
     public class ChameleonStoreContext : IdentityDbContext<User>
     {
         public ChameleonStoreContext(DbContextOptions<ChameleonStoreContext> options)
@@ -24,30 +22,10 @@ namespace ChameleonStore.Web.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder
-                .Entity<Brand>()
-                .HasMany(b => b.Products)
-                .WithOne(p => p.Brand)
-                .HasForeignKey(p => p.BrandId);
-
-            builder
-                .Entity<Category>()
-                .HasMany(c => c.Products)
-                .WithOne(p => p.Category)
-                .HasForeignKey(p => p.CategoryId);
-
-            builder
-                .Entity<User>()
-                .HasMany(u => u.Orders)
-                .WithOne(o => o.User)
-                .HasForeignKey(o => o.UserId);
-
-            builder
-                .Entity<Order>()
-                .HasMany(o => o.Items)
-                .WithOne(i => i.Order)
-                .HasForeignKey(i => i.OrderId);
-
+            builder.ApplyConfiguration(new UserConfig());
+            builder.ApplyConfiguration(new CategoryConfig());
+            builder.ApplyConfiguration(new OrderConfig());
+            builder.ApplyConfiguration(new BrandConfig());
             base.OnModelCreating(builder);
         }
     }

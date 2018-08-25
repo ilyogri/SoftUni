@@ -55,6 +55,20 @@ namespace ChameleonStore.Web.Areas.Identity.Pages.Account
                     LastName = Input.LastName
                 };
 
+                var userWithTheSameUsername = await userManager.FindByNameAsync(Input.Username);
+                if(userWithTheSameUsername != null)
+                {
+                    TempData[WebConstants.TempDataErrorMessageKey] = "User with the same name is already registered.";
+                    return Page();
+                }
+                
+                var userWithTheSameEmail = await userManager.FindByEmailAsync(Input.Email);
+                if (userWithTheSameEmail != null)
+                {
+                    TempData[WebConstants.TempDataErrorMessageKey] = "User with the same email is already registered.";
+                    return Page();
+                }
+
                 var result = await userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
@@ -70,9 +84,10 @@ namespace ChameleonStore.Web.Areas.Identity.Pages.Account
                         protocol: Request.Scheme);
 
                     await emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                        $"Please confirm your account by <a href='{callbackUrl}'>clicking here</a>.");
 
                     await signInManager.SignInAsync(user, isPersistent: false);
+                    TempData[WebConstants.TempDataSuccessMessageKey] = "Successfully registered. Please confirm your e-mail address.";
                     return LocalRedirect(returnUrl);
                 }
                 foreach (var error in result.Errors)

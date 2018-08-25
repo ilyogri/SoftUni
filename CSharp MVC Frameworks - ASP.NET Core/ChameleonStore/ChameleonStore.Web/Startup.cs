@@ -62,33 +62,25 @@ namespace ChameleonStore.Web
                     options.ClientSecret = this.Configuration.GetSection("ExternalAuthentication:Google:ClientSecret").Value;
                 });
 
-            services.AddSingleton<IEmailSender, SendGridEmailSender>();
-            services.AddSingleton<IShoppingCartManager, ShoppingCartManager>();
-
             services.Configure<IdentityOptions>(options =>
             {
                 options.Password = new PasswordOptions()
                 {
-                    RequiredLength = 2,
-                    RequiredUniqueChars = 0,
+                    RequiredLength = 5,
+                    RequiredUniqueChars = 2,
                     RequireLowercase = true,
-                    RequireDigit = false,
-                    RequireUppercase = false,
-                    RequireNonAlphanumeric = false
+                    RequireDigit = true,
+                    RequireUppercase = true,
+                    RequireNonAlphanumeric = true
                 };
 
-                //options.SignIn.RequireConfirmedEmail = true;
+                options.SignIn.RequireConfirmedEmail = true;
             });
 
             services.AddAutoMapper();
             services.AddSession();
 
-            services.AddScoped<IAdminProductService, AdminProductService>();
-            services.AddScoped<IProductService, ProductService>();
-            services.AddScoped<IDropDownListable, DropDownListService>();
-            services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IRoleService, RoleService>();
-            services.AddScoped<IOrderService, OrderService>();
+            ServicesConfiguration.RegisterAll(services);
 
             services
                 .AddMvc()

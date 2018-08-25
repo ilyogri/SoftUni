@@ -38,11 +38,11 @@
                     <br />
                     @if (this.User.IsInRole(WebConstants.AdministratorRole))
                     {
-                        <div>
-                            <a class="btn btn-warning btn-sm" asp-area="Admin" asp-controller="Products" asp-action="Edit" asp-route-id="@Model.Input.Id">Edit</a>
-                            @Html.ActionLink("Delete", "Delete",
-                            new { id = Model.Input.Id, area = WebConstants.AdminArea },
-                            new { onclick = "return confirm('Are you sure you wish to delete this product?');", @class="btn btn-danger btn-sm" })
+                        <div class="action">
+                            <a class="btn btn-warning btn-sm" asp-area="Admin"
+                               asp-controller="Products" asp-action="Edit" asp-route-id="@Model.Input.Id">Edit</a>
+                            <a class="btn btn-danger btn-sm" asp-area="Admin" asp-controller="Products"
+                               asp-action="Delete" asp-route-id="@Model.Input.Id" onclick="return confirm('Are you sure you wish to delete this product?');">Delete</a>
                         </div>
                     }
                 </div>
