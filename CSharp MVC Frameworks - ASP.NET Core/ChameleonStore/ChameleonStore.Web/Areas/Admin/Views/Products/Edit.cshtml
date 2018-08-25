@@ -1,0 +1,21 @@
+﻿@model ProductFormModel
+
+@{
+    ViewData["Title"] = "Edit Product";
+}
+
+<div class="container">
+    <div class="login-form">
+        <div class="main-div">
+            <div class="panel">
+                <h2><strong>@ViewData["Title"]</strong></h2>
+            </div>
+            <form method="post">
+                @{
+                    await Html.RenderPartialAsync("_CourseFormPartial");
+                }
+                <button type="submit" class="btn btn-default">Edit Product</button>
+            </form>
+        </div>
+    </div>
+</div>

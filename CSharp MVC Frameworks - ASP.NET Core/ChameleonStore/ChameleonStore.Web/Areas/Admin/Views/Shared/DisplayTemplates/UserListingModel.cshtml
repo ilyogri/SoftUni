@@ -1,0 +1,17 @@
+﻿@model UserListingModel
+
+<tr>
+    <td>@Model.Username</td>
+    <td>@Model.Email</td>
+    <td>@Model.OrdersMade</td>
+    <td>
+        <a class="btn btn-warning btn-sm" asp-area="Admin" asp-controller="Users" asp-action="AddToRole" asp-route-id="@Model.Id">
+            Add to role
+        </a>
+        <a asp-area="Admin" asp-controller="Users" 
+           asp-action="Delete" asp-route-id="@Model.Id" 
+           onclick="return confirm('Are you sure you wish to delete this user?')">
+            <span class="glyphicon glyphicon-trash"></span>
+        </a>
+    </td>
+</tr>

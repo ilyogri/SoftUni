@@ -1,0 +1,19 @@
+﻿@model ProductDetailsViewModel
+
+<div class="container-fluid">
+    <div class="preview col-md-4">
+        <div class="preview-pic tab-content">
+            <div class="tab-pane active">
+                <img src="@Model.ImageUrl" />
+            </div>
+        </div>
+    </div>
+    <div class="details col-md-8">
+        <h1 class="display-3">@Model.Name</h1>
+        <p><strong>Brand - </strong>@Model.Brand</p>
+        <p><strong>Category - </strong>@Model.Category</p>
+        <p><strong>Price - </strong>@(Model.Price.ToString("F2"))&euro;</p>
+        <p><strong>Condition - </strong>@Model.Condition</p>
+        <p><strong>Description - </strong>@Model.Description</p>
+    </div>
+</div>

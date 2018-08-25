@@ -1,0 +1,146 @@
+﻿body {
+    margin-top: 20px;
+}
+/* -------------------------------------------------------------- Box Product -------------------------------------------------------------- */
+.box-product-outer {
+    margin-bottom: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px
+}
+
+    .box-product-outer:hover {
+        outline: 1px solid #aaa;
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .175)
+    }
+
+.tab-content .box-product-outer {
+    margin-bottom: 0
+}
+
+.box-product-slider-outer {
+    padding: 10px
+}
+
+.box-product .img-wrapper {
+    position: relative;
+    overflow: hidden
+}
+
+    .box-product .img-wrapper > :first-child {
+        position: relative;
+        display: block
+    }
+
+    .box-product .img-wrapper > a > img {
+        width: 100%
+    }
+
+    .box-product .img-wrapper .tags {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        overflow: visible;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        vertical-align: inherit;
+        border-width: 0;
+        background-color: transparent;
+        direction: rtl
+    }
+
+    .box-product .img-wrapper .tags-left {
+        left: 0;
+        direction: ltr
+    }
+
+    .box-product .img-wrapper .tags > .label-tags {
+        display: table;
+        margin: 1px 0 0 0;
+        text-align: left;
+        opacity: .92;
+        filter: alpha(opacity=92);
+        direction: ltr
+    }
+
+        .box-product .img-wrapper .tags > .label-tags:hover {
+            opacity: 1;
+            filter: alpha(opacity=100)
+        }
+
+        .box-product .img-wrapper .tags > .label-tags a:hover {
+            text-decoration: none
+        }
+
+    .box-product .img-wrapper > .option {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: -30px;
+        left: 0;
+        width: auto;
+        height: 28px;
+        -webkit-transition: all .2s ease;
+        -o-transition: all .2s ease;
+        transition: all .2s ease;
+        text-align: center;
+        vertical-align: middle;
+        background-color: rgba(0, 0, 0, .55)
+    }
+
+    .box-product .img-wrapper .option > a {
+        font-size: 18px;
+        font-weight: normal;
+        display: inline-block;
+        padding: 0 4px;
+        color: #fff
+    }
+
+    .box-product .img-wrapper:hover > .option {
+        top: auto;
+        bottom: 0
+    }
+
+.box-product h6 a {
+    line-height: 1.4
+}
+
+.price {
+    margin-bottom: 5px;
+    color: #f44336
+}
+
+    .price .price-down {
+        margin-left: 5px;
+        padding: 2px 5px;
+        color: #fff;
+        background: #f44336
+    }
+
+.price-old {
+    position: relative;
+    display: inline-block;
+    margin-right: 7px;
+    color: #666
+}
+
+    .price-old:before {
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        content: '';
+        border-bottom: 1px solid #666
+    }
+
+.rating i {
+    color: #fc0
+}
+
+.product-sorting-bar {
+    border: 1px solid #e5e5e5
+}
+/* -------------------------------------------------------------- End of Box Product -------------------------------------------------------------- */
+

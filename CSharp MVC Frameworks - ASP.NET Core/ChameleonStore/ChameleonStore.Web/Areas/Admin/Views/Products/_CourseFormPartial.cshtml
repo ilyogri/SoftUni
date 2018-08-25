@@ -1,0 +1,39 @@
+﻿@model ProductFormModel
+
+<div class="form-group">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Description"></label>
+    <input asp-for="Description" class="form-control" />
+    <span asp-validation-for="Description" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Price"></label>
+    <input asp-for="Price" class="form-control" />
+    <span asp-validation-for="Price" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="ImageUrl"></label>
+    <input asp-for="ImageUrl" class="form-control" />
+    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Condition"></label>
+    <br />
+    <select asp-for="Condition" asp-items="Html.GetEnumSelectList(typeof(ProductCondition))"></select>
+    <span asp-validation-for="Condition" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="CategoryId"></label>
+    <select asp-for="CategoryId" asp-items="Model.Categories" class="form-control"></select>
+    <span asp-validation-for="CategoryId" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="BrandId"></label>
+    <select asp-for="BrandId" asp-items="Model.Brands" class="form-control"></select>
+    <span asp-validation-for="BrandId" class="text-danger"></span>
+</div>
+<br />

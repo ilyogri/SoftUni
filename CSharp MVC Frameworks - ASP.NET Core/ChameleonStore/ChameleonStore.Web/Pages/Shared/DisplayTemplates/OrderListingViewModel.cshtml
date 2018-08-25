@@ -1,0 +1,12 @@
+﻿@model OrderListingViewModel
+
+<tbody>
+    <tr>
+        <td><a asp-controller="Orders" asp-action="Details" asp-route-id="@Model.Id">@Model.Id</a></td>
+        <td>@Model.OrderDate</td>
+        <td>@Model.DeliveryDate</td>
+        <td>@Model.Address</td>
+        <td>@Model.TotalPrice</td>
+        <td>@Model.Products</td>
+    </tr>
+</tbody>

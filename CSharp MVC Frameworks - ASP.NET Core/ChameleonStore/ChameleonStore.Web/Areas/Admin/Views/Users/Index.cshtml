@@ -1,0 +1,25 @@
+﻿@model IEnumerable<UserListingModel>
+@{
+    ViewData["Title"] = "All users";
+}
+
+<div class="container">
+    <div class="row">
+        <h2 class="m-1" style="color: white">@ViewData["Title"]</h2>
+        <table class="table table-striped table-bordered" style="background: white">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Orders made</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @Html.DisplayForModel(Model)
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+﻿@model AdminProductListingViewModel
+
+<tr>
+    <td><a asp-page="/Products/Details" asp-route-id="@Model.Id">@Model.Id</a></td>
+    <td><a asp-page="/Products/Details" asp-route-id="@Model.Id">@Model.Name</a></td>
+    <td>@Model.Price</td>
+    <td>@Model.Brand</td>
+    <td>@Model.Category</td>
+    <td>
+        <a class="btn btn-warning btn-sm" asp-area="Admin" asp-controller="Products" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+        <a class="btn btn-danger btn-sm" asp-area="Admin" asp-controller="Products"
+           asp-action="Delete" asp-route-id="@Model.Id" onclick="return confirm('Are you sure you wish to delete this product?');">Delete</a>
+    </td>
+</tr>

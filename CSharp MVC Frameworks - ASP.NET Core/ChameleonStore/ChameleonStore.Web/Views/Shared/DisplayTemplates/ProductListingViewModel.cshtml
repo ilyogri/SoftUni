@@ -1,0 +1,36 @@
+﻿@model ProductListingViewModel
+
+<a asp-page="/Products/Details" asp-route-id="@Model.Id">
+    <div class="col-sm-3 col-md-3 box-product-outer">
+        <div class="box-product">
+            <img alt="@Model.Name" class="img-responsive" src="@Model.ImageUrl">
+        </div>
+        <p>
+            <h3 class="panel-title">
+                @Model.Name
+            </h3>
+        </p>
+        <div class="price">
+            @if (Model.Discount > 0)
+            {
+                <div>
+                    @((Model.Price - ((Model.Discount / 100) * Model.Price)).ToString("F2"))
+                    <span class="price-down">-@Model.Discount%</span>
+                </div>
+                <span class="price-old">$@Model.Price</span>
+            }
+            else
+            {
+                @Model.Price
+            }
+        </div>
+        <div class="rating">
+            @{ var stars = Math.Min(DataConstants.MaxStars, Model.Views / 300); }
+            @for (int i = 0; i <= stars; i++)
+            {
+                <i class="ace-icon fa fa-star"></i>
+            }
+            (@Model.Views views)
+        </div>
+    </div>
+</a>

@@ -1,0 +1,52 @@
+﻿@page
+@model DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <div class="preview col-md-6">
+                    <div class="preview-pic tab-content">
+                        <div class="tab-pane active" id="pic-1"><img src="@Model.Input.ImageUrl" /></div>
+                    </div>
+                </div>
+                <div class="details col-md-6">
+                    <h3 class="product-title">@Model.Input.Name</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <span class="review-no">@Model.Input.Views views</span>
+                    </div>
+                    <p class="product-description"><strong>Description: </strong> @Model.Input.Description</p>
+                    <p><strong>Condition: </strong>@Model.Input.Condition</p>
+                    <p><strong>Brand: </strong> @Model.Input.Brand</p>
+                    <p><strong>Category: </strong> @Model.Input.Category</p>
+                    <h4 class="price">current price: <span>$@Model.Input.Price</span></h4>
+                    <div class="action">
+                        <a class="add-to-cart btn btn-default" asp-controller="ShoppingCart" asp-action="AddToCart" asp-route-id="@Model.Input.Id">
+                            add to cart
+                        </a>
+                    </div>
+                    <br />
+                    @if (this.User.IsInRole(WebConstants.AdministratorRole))
+                    {
+                        <div>
+                            <a class="btn btn-warning btn-sm" asp-area="Admin" asp-controller="Products" asp-action="Edit" asp-route-id="@Model.Input.Id">Edit</a>
+                            @Html.ActionLink("Delete", "Delete",
+                            new { id = Model.Input.Id, area = WebConstants.AdminArea },
+                            new { onclick = "return confirm('Are you sure you wish to delete this product?');", @class="btn btn-danger btn-sm" })
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

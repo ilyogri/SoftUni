@@ -1,0 +1,31 @@
+﻿@model AddToRoleFormModel
+@{
+    ViewData["Title"] = "Add role to user";
+}
+
+<div class="container">
+    <div class="login-form">
+        <div class="main-div">
+            <div class="panel">
+                <h2><strong>@ViewData["Title"]</strong></h2>
+            </div>
+            @if (!Model.Roles.Any())
+            {
+                <div class="alert alert-info">
+                    This user cannot be added to any other role!
+                </div>
+            }
+            else
+            {
+                <form method="post">
+                    <div class="form-group">
+                        <label asp-for="RoleId"></label>
+                        <select asp-for="RoleId" asp-items="Model.Roles" class="form-control"></select>
+                        <span asp-validation-for="RoleId" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-default">Add</button>
+                </form>
+            }
+        </div>
+    </div>
+</div>

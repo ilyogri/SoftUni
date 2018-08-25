@@ -1,0 +1,24 @@
+﻿@model SearchViewModel
+
+@{
+    ViewData["Title"] = $"Search results for {Model.FilterName} '{Model.SearchText}':   ";
+}
+
+
+@if (Model.Products == null)
+{
+    <h3 style="color: white">Please enter valid search term.</h3>
+    <a class="btn btn-default" href="/">Go back to home</a>
+}
+else if (Model.Products.Any())
+{
+    <h2 style="color: white">@ViewData["Title"]</h2>
+    <div class="col-md-12 products-listing">
+        @Html.DisplayFor(m => m.Products)
+    </div>
+}
+else
+{
+    <h2 style="color: white">@ViewData["Title"]</h2>
+    <h3 style="color: white">No products to show.</h3>
+}
