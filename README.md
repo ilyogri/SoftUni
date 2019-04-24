@@ -16,3 +16,4 @@
 |<a href="https://softuni.bg/trainings/1619/programming-fundamentals-may-2017"> Programming Fundamentals </a>| <a href="https://softuni.bg/certificates/details/21200/06296ccf"> Link</a> |
 |<a href="https://softuni.bg/trainings/1621/software-technologies-july-2017"> Software Technologies </a>| <a href="https://softuni.bg/certificates/details/22762/5aedc23b"> Link</a> |
 |<a href="https://softuni.bg/trainings/1747/databases-basics-mssql-server-september-2017"> Databases Basics - MS SQL Server </a>| <a href="https://softuni.bg/certificates/details/23834/67a6528b"> Link</a> |
+|<a href="https://softuni.bg/trainings/1741/databases-advanced-entity-framework-october-2017"> Databases Advanced - Entity Framework  </a>| <a href="https://softuni.bg/certificates/details/49664/fd61d0e4"> Link</a> |
